@@ -27,50 +27,51 @@ export default function Component() {
           <nav className="flex items-center space-x-4">
             <Link
               className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#"
+              href="home"
             >
               Home
             </Link>
             <Link
               className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#"
+              href="about-us"
             >
               About us
             </Link>
             <Link
               className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#"
+              href="courses"
             >
               Courses
             </Link>
             <Link
               className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#"
+              href="facilities"
+            >
+              Facilities
+            </Link>
+            <Link
+              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="professors"
             >
               Professors
             </Link>
             <Link
               className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="#"
+              href="contact"
             >
               Contact
             </Link>
           </nav>
         </div>
         <div className="flex items-center space-x-4">
-          <Button size="sm" variant="ghost">
-            Sign in
-          </Button>
-          <Button size="sm" variant="outline">
-            Sign up
-          </Button>
+          <h2 className="font-bold">ESTD:2020</h2>
         </div>
       </nav>
       <main className="flex-1 overflow-y-auto">
         <section className="flex items-center justify-center w-full min-h-screen py-16 text-center">
           <div className="container space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter lg:leading-tighter/none sm:text-5xl md:text-6xl xl:text-7xl">
-              Welcome to Shad University
+              Welcome to KKMVNS University
             </h1>
             <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
               Where the future is bright and the learning never stops.
@@ -78,12 +79,12 @@ export default function Component() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12">
+          <div className="container space-y-12 mx-auto ">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 About Us
               </h2>
-              <p className="text-gray-500 dark:text-gray-400">
+              <p className="text-gray-500 dark:text-gray-400 text-center ">
                 Welcome to our esteemed institution, offering a comprehensive
                 Bachelor of Arts (B.A.) program approved by the prestigious
                 Mahatma Gandhi Kashi Vidyapeeth in Varanasi, Uttar Pradesh.
@@ -120,6 +121,26 @@ export default function Component() {
                 the world.
               </p>
             </div>
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
+                Facilities
+              </h2>
+              <ul className="text-gray-500 dark:text-gray-400 text-center ">
+                <li className="py-2">✦WiFi-enabled campus</li>
+                <li className="py-2">✦CCTV surveillance across the campus</li>
+                <li className="py-2">
+                  ✦Travel vehicles available for students
+                </li>
+                <li className="py-2"> ✦Well-equipped laboratories</li>
+                <li className="py-2">✦Spacious playing ground</li>
+                <li className="py-2">
+                  ✦ Smart classrooms with modern technology
+                </li>
+                <li className="py-2">✦Biometric attendance system</li>
+              </ul>
+            </div>
+
+            <h2 className="text-3xl font-bold mb-4 text-center">Courses</h2>
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
               <Card>
                 <CardHeader>
@@ -204,7 +225,7 @@ export default function Component() {
                 <CardHeader>
                   <h2 className="card-title">
                     {" "}
-                    Bachelor of Arts (B.A.) in History 
+                    Bachelor of Arts (B.A.) in History
                   </h2>
                   <p className="card-subtitle">with Prof. W. Wonka</p>
                 </CardHeader>
@@ -240,12 +261,12 @@ export default function Component() {
                   </Button>
                 </CardFooter>
               </Card>
-
             </div>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12">
+          <h2 className="text-3xl font-bold mb-4 text-center">Professors</h2>
+          <div className="container space-y-12 mx-auto">
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
               <Card>
                 <img
@@ -331,12 +352,12 @@ export default function Component() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12">
+          <div className="container space-y-12 mx-auto">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl  text-center font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
                 Contact Us
               </h2>
-              <p className="text-gray-500 dark:text-gray-400">
+              <p className="text-gray-500 dark:text-gray-400 text-center">
                 Have a question or need more information? Send us a message.
               </p>
             </div>
@@ -362,10 +383,20 @@ export default function Component() {
           </div>
         </section>
       </main>
-      <footer className="flex items-center justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
+      {/* <footer className="flex items-center justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          Made with love by Shadcn
+          Approved by. Mahatma Gandhi Kashi Vidyapeeth varanasi.
         </p>
+      </footer> */}
+      <footer className="flex flex-col items-center justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
+        <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+          Approved by. Mahatma Gandhi Kashi Vidyapeeth Varanasi.
+        </p>
+        <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-2">
+          <p>Email: kkmvns4@gmail.com</p>
+          <p>Contact No: +91 7985252219 & 9956761690</p>
+          <p>Address: Gaur mirzamurad varanasin, Uttar Pradesh</p>
+        </div>
       </footer>
     </div>
   );

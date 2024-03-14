@@ -52,7 +52,7 @@ export default function Component() {
         </div>
         <div className="flex items-center space-x-4">
           <Button size="sm" variant="ghost">
-            Sign in
+        
           </Button>
           <Button size="sm" variant="outline">
             Sign up

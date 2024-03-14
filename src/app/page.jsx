@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -34,6 +35,12 @@ export default function Component() {
               className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
               href="#"
             >
+              About us
+            </Link>
+            <Link
+              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
+              href="#"
+            >
               Courses
             </Link>
             <Link
@@ -52,7 +59,7 @@ export default function Component() {
         </div>
         <div className="flex items-center space-x-4">
           <Button size="sm" variant="ghost">
-        
+            Sign in
           </Button>
           <Button size="sm" variant="outline">
             Sign up
@@ -72,11 +79,52 @@ export default function Component() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12">
+            <div className="space-y-4">
+              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
+                About Us
+              </h2>
+              <p className="text-gray-500 dark:text-gray-400">
+                Welcome to our esteemed institution, offering a comprehensive
+                Bachelor of Arts (B.A.) program approved by the prestigious
+                Mahatma Gandhi Kashi Vidyapeeth in Varanasi, Uttar Pradesh.
+                Situated in the vibrant city of Varanasi, our college campus is
+                located in the heart of Gaur Mirzamurad, pulsating with the rich
+                cultural heritage and academic fervor that characterizes this
+                historical city. At our institution, we take pride in providing
+                a well-rounded education that encompasses a diverse range of
+                subjects tailored to nurture the intellectual curiosity and
+                holistic development of our students. Our B.A. program offers a
+                dynamic curriculum featuring a myriad of subjects including
+                Hindi, English, Education, Sanskrit, Home Science, History, and
+                Sociology, ensuring students receive a multifaceted education
+                that equips them with a broad spectrum of knowledge and skills.
+                With a focus on academic excellence, our faculty comprises
+                experienced educators and scholars who are committed to
+                fostering a stimulating learning environment where students are
+                encouraged to engage critically with their subjects and explore
+                their passions. Through innovative teaching methods,
+                collaborative projects, and experiential learning opportunities,
+                we aim to inspire intellectual growth and cultivate the
+                analytical thinking, communication skills, and cultural
+                awareness essential for success in today's interconnected world.
+                Beyond academics, our college offers a supportive community
+                where students can thrive personally and professionally. Whether
+                through student clubs, extracurricular activities, or community
+                outreach initiatives, we strive to empower our students to
+                become active participants in society and leaders in their
+                chosen fields. As you embark on your academic journey, we invite
+                you to join our vibrant community and discover the endless
+                possibilities that await you at our institution. Together, let
+                us embark on a transformative educational experience that will
+                shape your future and empower you to make a meaningful impact in
+                the world.
+              </p>
+            </div>
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
               <Card>
                 <CardHeader>
                   <h2 className="card-title">
-                    Introduction to Quantum Computing
+                    Bachelor of Arts (B.A.) in Hindi
                   </h2>
                   <p className="card-subtitle">with Dr. A. Bell</p>
                 </CardHeader>
@@ -94,7 +142,10 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">The Art of Storytelling</h2>
+                  <h2 className="card-title">
+                    {" "}
+                    Bachelor of Arts (B.A.) in Sanskrit
+                  </h2>
                   <p className="card-subtitle">with Prof. A. King</p>
                 </CardHeader>
                 <CardContent>
@@ -111,7 +162,10 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">Ancient History: Myth & Legend</h2>
+                  <h2 className="card-title">
+                    {" "}
+                    Bachelor of Arts (B.A.) in English
+                  </h2>
                   <p className="card-subtitle">with Prof. A. Athena</p>
                 </CardHeader>
                 <CardContent>
@@ -128,7 +182,10 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">The Science of Chocolate</h2>
+                  <h2 className="card-title">
+                    {" "}
+                    Bachelor of Arts (B.A.) in Home Science
+                  </h2>
                   <p className="card-subtitle">with Prof. W. Wonka</p>
                 </CardHeader>
                 <CardContent>
@@ -143,6 +200,47 @@ export default function Component() {
                   </Button>
                 </CardFooter>
               </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="card-title">
+                    {" "}
+                    Bachelor of Arts (B.A.) in History 
+                  </h2>
+                  <p className="card-subtitle">with Prof. W. Wonka</p>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Delve into the delicious world of chocolate and uncover the
+                    sweet secrets of this delectable treat.
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button size="sm" variant="outline">
+                    View Course
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="card-title">
+                    {" "}
+                    Bachelor of Arts (B.A.) in Sociology
+                  </h2>
+                  <p className="card-subtitle">with Prof. W. Wonka</p>
+                </CardHeader>
+                <CardContent>
+                  <p>
+                    Delve into the delicious world of chocolate and uncover the
+                    sweet secrets of this delectable treat.
+                  </p>
+                </CardContent>
+                <CardFooter>
+                  <Button size="sm" variant="outline">
+                    View Course
+                  </Button>
+                </CardFooter>
+              </Card>
+
             </div>
           </div>
         </section>

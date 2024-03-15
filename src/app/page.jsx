@@ -14,77 +14,69 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function Component() {
   return (
-    <div className="flex flex-col h-screen">
-      <nav className="flex items-center justify-between px-6 h-14 border-b border-gray-200 dark:border-gray-800">
+    <div
+      className="flex flex-col h-screen "
+      style={{ backgroundColor: "#f5f5dc" }}
+    >
+      <nav className="flex items-center justify-between px-6 h-14 border-b border-gray-800 dark:border-gray-900">
         <div className="flex items-center space-x-4">
           <Link
             className="flex items-center space-x-2 text-sm font-medium tracking-widest uppercase"
             href="#"
           >
-            <FlagIcon className="h-6 w-6" />
+            <FlagIcon className="h-6 w-6 text-black" />
             <span className="sr-only">Home</span>
           </Link>
           <nav className="flex items-center space-x-4">
-            <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="home"
-            >
+            <Link className="font-medium text-black" href="home">
               Home
             </Link>
-            <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="about-us"
-            >
+            <Link className="font-medium text-black" href="about-us">
               About us
             </Link>
-            <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="courses"
-            >
+            <Link className="font-medium text-black" href="courses">
               Courses
             </Link>
-            <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="facilities"
-            >
+            <Link className="font-medium  text-black" href="facilities">
               Facilities
             </Link>
-            <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="professors"
-            >
+            <Link className="font-medium text-black" href="professors">
               Professors
             </Link>
-            <Link
-              className="font-medium text-gray-500 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-50"
-              href="contact"
-            >
+            <Link className="font-medium text-black" href="contact">
               Contact
             </Link>
           </nav>
         </div>
         <div className="flex items-center space-x-4">
-          <h2 className="font-bold">ESTD:2020</h2>
+          <h2 className="font-bold text-black dark:text-black">ESTD:2020</h2>
         </div>
       </nav>
       <main className="flex-1 overflow-y-auto">
         <section className="flex items-center justify-center w-full min-h-screen py-16 text-center">
           <div className="container space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter lg:leading-tighter/none sm:text-5xl md:text-6xl xl:text-7xl">
+            <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-5xl md:text-6xl xl:text-7xl">
               Welcome to KKMVNS University
             </h1>
-            <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+            <p className="mx-auto max-w-[600px] text-black md:text-xl dark:text-gray-400">
               Where the future is bright and the learning never stops.
             </p>
           </div>
         </section>
+        <div className="mt-4">
+          <img
+            src="/WhatsApp Image 2024-03-14 at 21.32.12.jpeg"
+            alt="hero"
+            className="mx-auto"
+          />
+        </div>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 mx-auto ">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
+              <h2 className="text-3xl font-bold tracking-tighter  text-black lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 About Us
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-center ">
+              <p className=" dark:text-gray-400 text-center text-black ">
                 Welcome to our esteemed institution, offering a comprehensive
                 Bachelor of Arts (B.A.) program approved by the prestigious
                 Mahatma Gandhi Kashi Vidyapeeth in Varanasi, Uttar Pradesh.
@@ -122,10 +114,10 @@ export default function Component() {
               </p>
             </div>
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
+              <h2 className="text-3xl font-bold text-black tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 Facilities
               </h2>
-              <ul className="text-gray-500 dark:text-gray-400 text-center ">
+              <ul className="text-black dark:text-gray-400 text-center ">
                 <li className="py-2">✦WiFi-enabled campus</li>
                 <li className="py-2">✦CCTV surveillance across the campus</li>
                 <li className="py-2">
@@ -140,21 +132,17 @@ export default function Component() {
               </ul>
             </div>
 
-            <h2 className="text-3xl font-bold mb-4 text-center">Courses</h2>
+            <h2 className="text-3xl font-bold mb-4 text-center text-black">
+              Courses
+            </h2>
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
               <Card>
                 <CardHeader>
                   <h2 className="card-title">
                     Bachelor of Arts (B.A.) in Hindi
                   </h2>
-                  <p className="card-subtitle">with Dr. A. Bell</p>
                 </CardHeader>
-                <CardContent>
-                  <p>
-                    Learn the basics of quantum computing and its potential
-                    applications in this introductory course.
-                  </p>
-                </CardContent>
+                <CardContent></CardContent>
                 <CardFooter>
                   <Button size="sm" variant="outline">
                     View Course
@@ -167,14 +155,8 @@ export default function Component() {
                     {" "}
                     Bachelor of Arts (B.A.) in Sanskrit
                   </h2>
-                  <p className="card-subtitle">with Prof. A. King</p>
                 </CardHeader>
-                <CardContent>
-                  <p>
-                    Unleash your creativity and master the art of storytelling
-                    with this engaging course.
-                  </p>
-                </CardContent>
+                <CardContent></CardContent>
                 <CardFooter>
                   <Button size="sm" variant="outline">
                     View Course
@@ -187,14 +169,8 @@ export default function Component() {
                     {" "}
                     Bachelor of Arts (B.A.) in English
                   </h2>
-                  <p className="card-subtitle">with Prof. A. Athena</p>
                 </CardHeader>
-                <CardContent>
-                  <p>
-                    Explore the captivating world of ancient myths and legends
-                    with our expert professor.
-                  </p>
-                </CardContent>
+                <CardContent></CardContent>
                 <CardFooter>
                   <Button size="sm" variant="outline">
                     View Course
@@ -207,14 +183,8 @@ export default function Component() {
                     {" "}
                     Bachelor of Arts (B.A.) in Home Science
                   </h2>
-                  <p className="card-subtitle">with Prof. W. Wonka</p>
                 </CardHeader>
-                <CardContent>
-                  <p>
-                    Delve into the delicious world of chocolate and uncover the
-                    sweet secrets of this delectable treat.
-                  </p>
-                </CardContent>
+                <CardContent></CardContent>
                 <CardFooter>
                   <Button size="sm" variant="outline">
                     View Course
@@ -227,14 +197,8 @@ export default function Component() {
                     {" "}
                     Bachelor of Arts (B.A.) in History
                   </h2>
-                  <p className="card-subtitle">with Prof. W. Wonka</p>
                 </CardHeader>
-                <CardContent>
-                  <p>
-                    Delve into the delicious world of chocolate and uncover the
-                    sweet secrets of this delectable treat.
-                  </p>
-                </CardContent>
+                <CardContent></CardContent>
                 <CardFooter>
                   <Button size="sm" variant="outline">
                     View Course
@@ -247,14 +211,8 @@ export default function Component() {
                     {" "}
                     Bachelor of Arts (B.A.) in Sociology
                   </h2>
-                  <p className="card-subtitle">with Prof. W. Wonka</p>
                 </CardHeader>
-                <CardContent>
-                  <p>
-                    Delve into the delicious world of chocolate and uncover the
-                    sweet secrets of this delectable treat.
-                  </p>
-                </CardContent>
+                <CardContent></CardContent>
                 <CardFooter>
                   <Button size="sm" variant="outline">
                     View Course
@@ -265,88 +223,92 @@ export default function Component() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <h2 className="text-3xl font-bold mb-4 text-center">Professors</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center text-black">
+            Events
+          </h2>
           <div className="container space-y-12 mx-auto">
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
               <Card>
                 <img
-                  alt="Professor"
-                  className="aspect-[1.6] rounded-t-xl object-cover"
+                  alt="Events"
+                  className="w-full h-auto rounded-t-xl object-cover"
                   height={250}
-                  src="/placeholder.svg"
+                  src="/WhatsApp Image 2024-03-14 at 21.35.50.jpeg"
                   width={400}
                 />
-                <CardContent className="space-y-2">
-                  <h3 className="font-bold">Prof. M. Johnson</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Professor of Astrophysics
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button size="xs" variant="outline">
-                    View Profile
-                  </Button>
-                </CardFooter>
               </Card>
               <Card>
                 <img
-                  alt="Professor"
-                  className="aspect-[1.6] rounded-t-xl object-cover"
+                  alt="Events"
+                  className="w-full h-auto rounded-t-xl object-cover"
                   height={250}
-                  src="/placeholder.svg"
+                  src="/WhatsApp Image 2024-03-14 at 21.35.08 (1).jpeg"
                   width={400}
                 />
-                <CardContent className="space-y-2">
-                  <h3 className="font-bold">Prof. S. Lee</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Professor of History
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button size="xs" variant="outline">
-                    View Profile
-                  </Button>
-                </CardFooter>
               </Card>
               <Card>
                 <img
-                  alt="Professor"
-                  className="aspect-[1.6] rounded-t-xl object-cover"
+                  alt="Events"
+                  className="w-full h-auto rounded-t-xl object-cover"
                   height={250}
-                  src="/placeholder.svg"
+                  src="/WhatsApp Image 2024-03-14 at 21.35.09 (1).jpeg"
                   width={400}
                 />
-                <CardContent className="space-y-2">
-                  <h3 className="font-bold">Prof. E. Martinez</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Professor of Literature
-                  </p>
-                </CardContent>
-                <CardFooter>
-                  <Button size="xs" variant="outline">
-                    View Profile
-                  </Button>
-                </CardFooter>
               </Card>
               <Card>
                 <img
-                  alt="Professor"
-                  className="aspect-[1.6] rounded-t-xl object-cover"
+                  alt="Events"
+                  className="w-full h-auto rounded-t-xl object-cover"
                   height={250}
-                  src="/placeholder.svg"
+                  src="/WhatsApp Image 2024-03-14 at 21.35.09.jpeg"
                   width={400}
                 />
-                <CardContent className="space-y-2">
-                  <h3 className="font-bold">Prof. A. Singh</h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Professor of Computer Science
-                  </p>
+              </Card>
+
+              <Card>
+                <img
+                  alt="Events"
+                  className="w-full h-auto rounded-t-xl object-cover"
+                  height={250}
+                  src="/WhatsApp Image 2024-03-14 at 21.36.31.jpeg"
+                  width={400}
+                />
+              </Card>
+            </div>
+          </div>
+        </section>
+        <section className="w-full py-12 md:py-24 lg:py-32">
+          <h2 className="text-3xl font-bold mb-4 text-center text-black">
+            Boards of Trustees
+          </h2>
+          <div className="container space-y-12 mx-auto">
+            <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
+              <Card>
+                <img
+                  alt="Events"
+                  className="w-full h-auto rounded-t-xl object-cover"
+                  height={250}
+                  src="/WhatsApp Image 2024-03-14 at 21.38.08.jpeg"
+                  width={400}
+                />
+                <CardContent>
+                  <p className="font-bold">Manager: Sanjay Singh</p>
                 </CardContent>
-                <CardFooter>
-                  <Button size="xs" variant="outline">
-                    View Profile
-                  </Button>
-                </CardFooter>
+              </Card>
+              <Card flex flex-col justify-end>
+                <CardContent>
+                  <p className="font-bold">President: Saksham Singh</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent>
+                  <p className="font-bold">Traesure Manager: Shivanee Singh</p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent>
+                  <p className="font-bold">Vice President : Anuradha Singh</p>
+                </CardContent>
               </Card>
             </div>
           </div>
@@ -354,7 +316,7 @@ export default function Component() {
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 mx-auto">
             <div className="space-y-4">
-              <h2 className="text-3xl  text-center font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl  text-center  text-black font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
                 Contact Us
               </h2>
               <p className="text-gray-500 dark:text-gray-400 text-center">
@@ -378,7 +340,9 @@ export default function Component() {
                   rows={3}
                 />
               </div>
-              <Button size="md">Submit</Button>
+              <Button size="md" className="border border-black">
+                Submit
+              </Button>
             </div>
           </div>
         </section>
@@ -388,14 +352,16 @@ export default function Component() {
           Approved by. Mahatma Gandhi Kashi Vidyapeeth varanasi.
         </p>
       </footer> */}
-      <footer className="flex flex-col items-center justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+      <footer className="flex flex-col items-center text-black justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
+        <p className="text-sm text-black mb-2 font-bold">
           Approved by. Mahatma Gandhi Kashi Vidyapeeth Varanasi.
         </p>
         <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-2">
-          <p>Email: kkmvns4@gmail.com</p>
-          <p>Contact No: +91 7985252219 & 9956761690</p>
-          <p>Address: Gaur mirzamurad varanasin, Uttar Pradesh</p>
+          <p className="text-black">Email: kkmvns4@gmail.com</p>
+          <p className="text-black">Contact No: +91 7985252219 & 9956761690</p>
+          <p className="text-black">
+            Address: Gaur mirzamurad varanasin, Uttar Pradesh
+          </p>
         </div>
       </footer>
     </div>

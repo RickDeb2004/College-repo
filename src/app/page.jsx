@@ -28,22 +28,22 @@ export default function Component() {
             <span className="sr-only">Home</span>
           </Link>
           <nav className="flex items-center space-x-4">
-            <Link className="font-medium text-black" href="home">
+            <Link className="font-medium text-black" href="#home">
               Home
             </Link>
-            <Link className="font-medium text-black" href="about-us">
+            <Link className="font-medium text-black" href="#about-us">
               About us
             </Link>
-            <Link className="font-medium text-black" href="courses">
+            <Link className="font-medium text-black" href="#courses">
               Courses
             </Link>
-            <Link className="font-medium  text-black" href="facilities">
+            <Link className="font-medium  text-black" href="#facilities">
               Facilities
             </Link>
-            <Link className="font-medium text-black" href="professors">
-              Professors
+            <Link className="font-medium text-black" href="#events">
+              Events
             </Link>
-            <Link className="font-medium text-black" href="contact">
+            <Link className="font-medium text-black" href="#contact">
               Contact
             </Link>
           </nav>
@@ -54,9 +54,9 @@ export default function Component() {
       </nav>
       <main className="flex-1 overflow-y-auto">
         <section className="flex items-center justify-center w-full min-h-screen py-16 text-center">
-          <div className="container space-y-4">
+          <div id="home" className="container space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-5xl md:text-6xl xl:text-7xl">
-              Welcome to KKMVNS University
+              Welcome to KKMVNS College
             </h1>
             <p className="mx-auto max-w-[600px] text-black md:text-xl dark:text-gray-400">
               Where the future is bright and the learning never stops.
@@ -71,7 +71,7 @@ export default function Component() {
           />
         </div>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container space-y-12 mx-auto ">
+          <div id="about-us" className="container space-y-12 mx-auto ">
             <div className="space-y-4">
               <h2 className="text-3xl font-bold tracking-tighter  text-black lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 About Us
@@ -113,7 +113,7 @@ export default function Component() {
                 the world.
               </p>
             </div>
-            <div className="space-y-4">
+            <div id="facilities" className="space-y-4">
               <h2 className="text-3xl font-bold text-black tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 Facilities
               </h2>
@@ -135,7 +135,10 @@ export default function Component() {
             <h2 className="text-3xl font-bold mb-4 text-center text-black">
               Courses
             </h2>
-            <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
+            <div
+              id="courses"
+              className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8"
+            >
               <Card>
                 <CardHeader>
                   <h2 className="card-title">
@@ -226,7 +229,7 @@ export default function Component() {
           <h2 className="text-3xl font-bold mb-4 text-center text-black">
             Events
           </h2>
-          <div className="container space-y-12 mx-auto">
+          <div id="events" className="container space-y-12 mx-auto">
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
               <Card>
                 <img
@@ -292,7 +295,7 @@ export default function Component() {
                   width={400}
                 />
                 <CardContent>
-                  <p className="font-bold">Manager: Sanjay Singh</p>
+                  <p className="font-bold pt-5">Manager: Sanjay Singh</p>
                 </CardContent>
               </Card>
               <Card flex flex-col justify-end>
@@ -315,7 +318,7 @@ export default function Component() {
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container space-y-12 mx-auto">
-            <div className="space-y-4">
+            <div id="contact" className="space-y-4">
               <h2 className="text-3xl  text-center  text-black font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
                 Contact Us
               </h2>
@@ -325,15 +328,21 @@ export default function Component() {
             </div>
             <div className="grid max-w-sm gap-4 mx-auto">
               <div className="space-y-2">
-                <Label htmlFor="name">Name</Label>
+                <Label htmlFor="name" className="text-black">
+                  Name
+                </Label>
                 <Input id="name" placeholder="Enter your name" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email</Label>
+                <Label htmlFor="email" className="text-black">
+                  Email
+                </Label>
                 <Input id="email" placeholder="Enter your email" type="email" />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="message">Message</Label>
+                <Label htmlFor="message" className="text-black">
+                  Message
+                </Label>
                 <Textarea
                   id="message"
                   placeholder="Enter your message"

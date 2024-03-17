@@ -426,14 +426,14 @@ export default function Component() {
       </main>
 
       <footer className="flex flex-col items-center justify-center w-full h-auto border-t border-gray-200 dark:border-gray-800 p-4">
-        <p className="text-sm text-black md:text-base whitespace-nowrap lg:text-base xl:text-base mb-2 font-bold">
+        <p className="text-sm text-black md:text-base whitespace-nowrap lg:text-base xl:text-base mb-2 font-bold ">
           Approved by. Mahatma Gandhi Kashi Vidyapeeth Varanasi.
         </p>
         <div className="flex flex-col items-center space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm mb-2">
           <p className="text-black">Email: kkmvns4@gmail.com</p>
           <p className="text-black">Contact No: +91 9956761690</p>
           <p className="text-black">
-            Address: Gaur mirzamurad varanasin, Uttar Pradesh
+            Address: Gaur mirzamurad varanasi, Uttar Pradesh
           </p>
         </div>
       </footer>

@@ -1,6 +1,9 @@
+"use client";
+
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import {
   CardHeader,
@@ -11,8 +14,15 @@ import {
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { useState } from "react";
 
 export default function Component() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
     <div
       className="flex flex-col h-screen "
@@ -20,6 +30,31 @@ export default function Component() {
     >
       <nav className="flex items-center justify-between px-6 h-14 border-b border-gray-800 dark:border-gray-900">
         <div className="flex items-center space-x-4">
+          {/* Hamburger Icon */}
+          <button className="block md:hidden" onClick={toggleNav}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-6 w-6 text-black dark:text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
+              />
+            </svg>
+          </button>
+          {/* ESTD */}
+        </div>
+        {/* <div className="flex items-center space-x-4"> */}
+        <nav
+          className={`flex items-center space-x-4 ${
+            isNavOpen ? "flex-col" : "hidden"
+          } md:flex  `}
+        >
           <Link
             className="flex items-center space-x-2 text-sm font-medium tracking-widest uppercase"
             href="#"
@@ -27,7 +62,13 @@ export default function Component() {
             <FlagIcon className="h-6 w-6 text-black" />
             <span className="sr-only">Home</span>
           </Link>
-          <nav className="flex items-center space-x-4">
+          <nav
+            className={`flex ${
+              isNavOpen ? "flex-col" : "flex-row"
+            } md:flex-row md:items-center md:space-x-4 ${
+              isNavOpen ? "justify-start" : "justify-between"
+            }`}
+          >
             <Link className="font-medium text-black" href="#home">
               Home
             </Link>
@@ -47,18 +88,20 @@ export default function Component() {
               Contact
             </Link>
           </nav>
-        </div>
-        <div className="flex items-center space-x-4">
+        </nav>
+        {/* </div> */}
+        <div className="flex items-center space-x-4 ">
           <h2 className="font-bold text-black dark:text-black">ESTD:2020</h2>
         </div>
       </nav>
+
       <main className="flex-1 overflow-y-auto">
         <section className="flex items-center justify-center w-full min-h-screen py-16 text-center">
           <div id="home" className="container space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-5xl md:text-6xl xl:text-7xl">
+            <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-3xl md:text-5xl xl:text-7xl">
               Welcome to KKMVNS College
             </h1>
-            <p className="mx-auto max-w-[600px] text-black md:text-xl dark:text-gray-400">
+            <p className="mx-auto max-w-[600px] text-black md:text-lg sm:text-md dark:text-gray-400">
               Where the future is bright and the learning never stops.
             </p>
           </div>
@@ -76,7 +119,7 @@ export default function Component() {
               <h2 className="text-3xl font-bold tracking-tighter  text-black lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 About Us
               </h2>
-              <p className=" dark:text-gray-400 text-center text-black ">
+              <p className=" dark:text-gray-400 text-center text-black  lg:max-w-3xl lg:mx-auto sm:text-base ">
                 Welcome to our esteemed institution, offering a comprehensive
                 Bachelor of Arts (B.A.) program approved by the prestigious
                 Mahatma Gandhi Kashi Vidyapeeth in Varanasi, Uttar Pradesh.
@@ -137,16 +180,16 @@ export default function Component() {
             </h2>
             <div
               id="courses"
-              className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8"
+              className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8"
             >
-              <Card>
+              <Card className="md:h-15rem lg:col-span-1 xl:col-span-1 ">
                 <CardHeader>
-                  <h2 className="card-title">
+                  <h2 className="card-title text-lg md:text-xl lg:text-lg text-center xl:text-lg">
                     Bachelor of Arts (B.A.) in Hindi
                   </h2>
                 </CardHeader>
                 <CardContent></CardContent>
-                <CardFooter>
+                <CardFooter className=" md:text-center">
                   <Button size="sm" variant="outline">
                     View Course
                   </Button>
@@ -154,7 +197,7 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">
+                  <h2 className="card-title text-lg md:text-xl text-center lg:text-lg xl:text-lg">
                     {" "}
                     Bachelor of Arts (B.A.) in Sanskrit
                   </h2>
@@ -168,7 +211,7 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">
+                  <h2 className="card-title text-lg md:text-xl text-center lg:text-lg xl:text-lg">
                     {" "}
                     Bachelor of Arts (B.A.) in English
                   </h2>
@@ -182,7 +225,7 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">
+                  <h2 className="card-title text-lg md:text-xl text-center lg:text-lg xl:text-lg">
                     {" "}
                     Bachelor of Arts (B.A.) in Home Science
                   </h2>
@@ -196,7 +239,7 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">
+                  <h2 className="card-title text-lg md:text-xl text-center lg:text-lg xl:text-lg">
                     {" "}
                     Bachelor of Arts (B.A.) in History
                   </h2>
@@ -210,9 +253,23 @@ export default function Component() {
               </Card>
               <Card>
                 <CardHeader>
-                  <h2 className="card-title">
+                  <h2 className="card-title text-lg md:text-xl text-center lg:text-lg xl:text-lg">
                     {" "}
                     Bachelor of Arts (B.A.) in Sociology
+                  </h2>
+                </CardHeader>
+                <CardContent></CardContent>
+                <CardFooter>
+                  <Button size="sm" variant="outline">
+                    View Course
+                  </Button>
+                </CardFooter>
+              </Card>
+              <Card>
+                <CardHeader>
+                  <h2 className="card-title text-lg md:text-xl text-center lg:text-lg xl:text-lg">
+                    {" "}
+                    Bachelor of Arts (B.A.) in Education
                   </h2>
                 </CardHeader>
                 <CardContent></CardContent>
@@ -292,25 +349,33 @@ export default function Component() {
                   className="w-full h-auto rounded-t-xl object-cover"
                   height={250}
                   src="/WhatsApp Image 2024-03-14 at 21.38.08.jpeg"
-                  width={400}
+                  width={250}
                 />
                 <CardContent>
-                  <p className="font-bold pt-5">Manager: Sanjay Singh</p>
-                </CardContent>
-              </Card>
-              <Card flex flex-col justify-end>
-                <CardContent>
-                  <p className="font-bold">President: Saksham Singh</p>
+                  <p className="font-bold pt-5 text-center">
+                    Manager: Sanjay Singh
+                  </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent>
-                  <p className="font-bold">Traesure Manager: Shivanee Singh</p>
+                  <p className="font-bold text-center">
+                    President: Saksham Singh
+                  </p>
                 </CardContent>
               </Card>
               <Card>
                 <CardContent>
-                  <p className="font-bold">Vice President : Anuradha Singh</p>
+                  <p className="font-bold text-center">
+                    Traesure Manager: Shivanee Singh
+                  </p>
+                </CardContent>
+              </Card>
+              <Card>
+                <CardContent>
+                  <p className="font-bold text-center">
+                    Vice President : Anuradha Singh
+                  </p>
                 </CardContent>
               </Card>
             </div>
@@ -349,25 +414,24 @@ export default function Component() {
                   rows={3}
                 />
               </div>
-              <Button size="md" className="border border-black">
+              <Button
+                size="md"
+                className="border border-black md:h-auto w-auto"
+              >
                 Submit
               </Button>
             </div>
           </div>
         </section>
       </main>
-      {/* <footer className="flex items-center justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          Approved by. Mahatma Gandhi Kashi Vidyapeeth varanasi.
-        </p>
-      </footer> */}
-      <footer className="flex flex-col items-center text-black justify-center w-full h-20 border-t border-gray-200 dark:border-gray-800">
-        <p className="text-sm text-black mb-2 font-bold">
+
+      <footer className="flex flex-col items-center justify-center w-full h-auto border-t border-gray-200 dark:border-gray-800 p-4">
+        <p className="text-sm text-black md:text-base whitespace-nowrap lg:text-base xl:text-base mb-2 font-bold">
           Approved by. Mahatma Gandhi Kashi Vidyapeeth Varanasi.
         </p>
-        <div className="flex items-center space-x-4 text-sm text-gray-500 dark:text-gray-400 mb-2">
+        <div className="flex flex-col items-center space-y-2 text-xs md:text-sm lg:text-sm xl:text-sm mb-2">
           <p className="text-black">Email: kkmvns4@gmail.com</p>
-          <p className="text-black">Contact No: +91 7985252219 & 9956761690</p>
+          <p className="text-black">Contact No: +91 9956761690</p>
           <p className="text-black">
             Address: Gaur mirzamurad varanasin, Uttar Pradesh
           </p>

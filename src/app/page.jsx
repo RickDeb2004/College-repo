@@ -340,50 +340,7 @@ export default function Component() {
             </div>
           </div>
         </section>
-        {/* <section className="w-full py-12 md:py-24 lg:py-32">
-          <h2 className="text-3xl font-bold mb-4 text-center text-black">
-            Boards of Trustees
-          </h2>
-          <div className="container space-y-12 mx-auto">
-            <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
-              <Card>
-                <img
-                  alt="Events"
-                  className="w-full h-auto rounded-t-xl object-cover"
-                  height={250}
-                  src="/WhatsApp Image 2024-03-14 at 21.38.08.jpeg"
-                  width={250}
-                />
-                <CardContent>
-                  <p className="font-bold pt-5 text-center">
-                    Manager: Sanjay Singh
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent>
-                  <p className="font-bold text-center">
-                    President: Saksham Singh
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent>
-                  <p className="font-bold text-center">
-                    Traesure Manager: Shivanee Singh
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent>
-                  <p className="font-bold text-center">
-                    Vice President : Anuradha Singh
-                  </p>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section> */}
+
         <section className="w-full py-12 md:py-24 lg:py-32">
           <h2 className="text-3xl font-bold mb-4 text-center text-black">
             Boards of Trustees
@@ -400,31 +357,33 @@ export default function Component() {
                     width={250}
                   />
                   <CardContent>
-                    <p className="font-bold pt-5 text-center lg:text-center align-middle ">
-                      Manager: Sanjay Singh
-                    </p>
+                    <p className="font-bold text-center mb-4">Manager</p>
+                    <p className="font-bold text-center">Sanjay Singh</p>
                   </CardContent>
                 </Card>
                 <div className="grid grid-cols-1 gap-4">
                   <Card>
-                    <CardContent>
-                      <p className="font-bold text-center lg:text-center align-middle ">
-                        President: Saksham Singh
-                      </p>
+                    <CardContent className="flex flex-col justify-center items-center h-full">
+                      <p className="font-bold text-center mb-4">President</p>
+                      <p className="font-bold text-center">Saksham Singh</p>
                     </CardContent>
                   </Card>
+
                   <Card>
-                    <CardContent>
-                      <p className="font-bold text-center lg:text-center align-middle">
-                        Traesure Manager: Shivanee Singh
+                    <CardContent className="flex flex-col justify-center items-center h-full">
+                      <p className="font-bold text-center mb-4">
+                        Traesure Manager
                       </p>
+                      <p className="font-bold text-center">Shivanee Singh</p>
                     </CardContent>
                   </Card>
+
                   <Card>
-                    <CardContent>
-                      <p className="font-bold text-center lg:text-center align-middle">
-                        Vice President : Anuradha Singh
+                    <CardContent className="flex flex-col justify-center items-center h-full">
+                      <p className="font-bold text-center mb-4">
+                        Vice President{" "}
                       </p>
+                      <p className="font-bold text-center">Anuradha Singh</p>
                     </CardContent>
                   </Card>
                 </div>

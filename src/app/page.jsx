@@ -372,7 +372,7 @@ export default function Component() {
                   <Card>
                     <CardContent className="flex flex-col justify-center items-center h-full">
                       <p className="font-bold text-center mb-4">
-                        Traesure Manager
+                        Treasure Manager
                       </p>
                       <p className="font-bold text-center">Shivanee Singh</p>
                     </CardContent>

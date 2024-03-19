@@ -26,9 +26,12 @@ export default function Component() {
   return (
     <div
       className="flex flex-col h-screen "
-      style={{ backgroundColor: "#f5f5dc" }}
+      style={{ backgroundColor: "#F8F9FA" }}
     >
-      <nav className="flex items-center justify-between px-6 h-14 border-b border-gray-800 dark:border-gray-900">
+      <nav
+        className="flex items-center justify-between px-6 h-14 border-b border-gray-800 dark:border-gray-900"
+        style={{ backgroundColor: "#f5f5dc" }}
+      >
         <div className="flex items-center space-x-4">
           {/* Hamburger Icon */}
           <button className="block md:hidden" onClick={toggleNav}>
@@ -101,7 +104,7 @@ export default function Component() {
             <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-3xl md:text-5xl xl:text-7xl">
               Welcome to KKMVNS College
             </h1>
-            <p className="mx-auto max-w-[600px] text-black md:text-lg sm:text-md dark:text-gray-400">
+            <p className="mx-auto  max-w-[600px] text-black md:text-lg sm:text-md dark:text-black">
               Where the future is bright and the learning never stops.
             </p>
           </div>
@@ -119,7 +122,7 @@ export default function Component() {
               <h2 className="text-3xl font-bold tracking-tighter  text-black lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 About Us
               </h2>
-              <p className=" dark:text-gray-400 text-center text-black  lg:max-w-3xl lg:mx-auto sm:text-base ">
+              <p className=" dark:text-black text-center text-black  lg:max-w-3xl lg:mx-auto sm:text-base ">
                 Welcome to our esteemed institution, offering a comprehensive
                 Bachelor of Arts (B.A.) program approved by the prestigious
                 Mahatma Gandhi Kashi Vidyapeeth in Varanasi, Uttar Pradesh.
@@ -160,7 +163,7 @@ export default function Component() {
               <h2 className="text-3xl font-bold text-black tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 Facilities
               </h2>
-              <ul className="text-black dark:text-gray-400 text-center ">
+              <ul className="text-black dark:text-black text-center ">
                 <li className="py-2">✦WiFi-enabled campus</li>
                 <li className="py-2">✦CCTV surveillance across the campus</li>
                 <li className="py-2">
@@ -337,47 +340,54 @@ export default function Component() {
             </div>
           </div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32">
           <h2 className="text-3xl font-bold mb-4 text-center text-black">
             Boards of Trustees
           </h2>
           <div className="container space-y-12 mx-auto">
-            <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:gap-8">
-              <Card>
-                <img
-                  alt="Events"
-                  className="w-full h-auto rounded-t-xl object-cover"
-                  height={250}
-                  src="/WhatsApp Image 2024-03-14 at 21.38.08.jpeg"
-                  width={250}
-                />
-                <CardContent>
-                  <p className="font-bold pt-5 text-center">
-                    Manager: Sanjay Singh
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent>
-                  <p className="font-bold text-center">
-                    President: Saksham Singh
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent>
-                  <p className="font-bold text-center">
-                    Traesure Manager: Shivanee Singh
-                  </p>
-                </CardContent>
-              </Card>
-              <Card>
-                <CardContent>
-                  <p className="font-bold text-center">
-                    Vice President : Anuradha Singh
-                  </p>
-                </CardContent>
-              </Card>
+            <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-1 xl:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Card>
+                  <img
+                    alt="Events"
+                    className="w-full h-auto rounded-t-xl object-cover"
+                    height={250}
+                    src="/WhatsApp Image 2024-03-14 at 21.38.08.jpeg"
+                    width={250}
+                  />
+                  <CardContent>
+                    <p className="font-bold text-center mb-4">Manager</p>
+                    <p className="font-bold text-center">Sanjay Singh</p>
+                  </CardContent>
+                </Card>
+                <div className="grid grid-cols-1 gap-4">
+                  <Card>
+                    <CardContent className="flex flex-col justify-center items-center h-full">
+                      <p className="font-bold text-center mb-4">President</p>
+                      <p className="font-bold text-center">Saksham Singh</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardContent className="flex flex-col justify-center items-center h-full">
+                      <p className="font-bold text-center mb-4">
+                        Treasure Manager
+                      </p>
+                      <p className="font-bold text-center">Shivanee Singh</p>
+                    </CardContent>
+                  </Card>
+
+                  <Card>
+                    <CardContent className="flex flex-col justify-center items-center h-full">
+                      <p className="font-bold text-center mb-4">
+                        Vice President{" "}
+                      </p>
+                      <p className="font-bold text-center">Anuradha Singh</p>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -387,7 +397,7 @@ export default function Component() {
               <h2 className="text-3xl  text-center  text-black font-bold tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl">
                 Contact Us
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 text-center">
+              <p className="text-black dark:text-black text-center">
                 Have a question or need more information? Send us a message.
               </p>
             </div>
@@ -425,7 +435,10 @@ export default function Component() {
         </section>
       </main>
 
-      <footer className="flex flex-col items-center justify-center w-full h-auto border-t border-gray-200 dark:border-gray-800 p-4">
+      <footer
+        className="flex flex-col items-center justify-center w-full h-auto border-t border-gray-200 dark:border-gray-800 p-4"
+        style={{ backgroundColor: "#f5f5dc" }}
+      >
         <p className="text-sm text-black md:text-base whitespace-nowrap lg:text-base xl:text-base mb-2 font-bold ">
           Approved by. Mahatma Gandhi Kashi Vidyapeeth Varanasi.
         </p>
@@ -433,7 +446,7 @@ export default function Component() {
           <p className="text-black">Email: kkmvns4@gmail.com</p>
           <p className="text-black">Contact No: +91 9956761690</p>
           <p className="text-black">
-            Address: Gaur mirzamurad varanasi, Uttar Pradesh
+            Address: Gaur Mirzamurad Varanasi, Uttar Pradesh
           </p>
         </div>
       </footer>

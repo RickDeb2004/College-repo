@@ -318,7 +318,7 @@ export default function Component() {
 
             <section id="courses" className="py-16 bg-white">
               <div className="container mx-auto px-4 max-w-5xl">
-                <h2 className="text-3xl font-bold text-black tracking-tight text-center mb-8">
+                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
                   Courses
                 </h2>
                 <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
@@ -356,7 +356,7 @@ export default function Component() {
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
-          <h2 className="text-3xl font-bold mb-4 text-center text-black">
+          <h2 className="text-3xl font-bold mb-4 text-center text-blue-800">
             Events
           </h2>
           <div id="events" className="container space-y-12 mx-auto">
@@ -413,7 +413,7 @@ export default function Component() {
 
         <section id="trustees" className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
-            <h2 className="text-3xl font-bold text-black tracking-tight text-center mb-8">
+            <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
               Boards of Trustees
             </h2>
             <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">

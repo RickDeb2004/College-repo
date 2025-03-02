@@ -41,17 +41,17 @@ export default function Component() {
             />
             <div className="text-black">
               <h1 className="text-xl font-bold tracking-tight">
-              केकेएमव्हीएनएस  उच्च शिक्षा संस्थान
+              किशोरी कमलेश महाविद्यालय
               </h1>
               <p className="text-sm">KKMVNS College, Varanasi, Uttar Pradesh</p>
             </div>
           </div>
           <div className="flex items-center space-x-4 text-sm text-gray-700">
-            <span>📞 8707046593 | 8795317303</span>
+            <span>📞 7985252219 | 9956761690</span>
             <span>
               🌐{" "}
-              <Link href="https://kkmvns.edu" className="underline">
-                kkmvns.edu
+              <Link href="https://kkmvns.in" className="underline">
+                kkmvns.in
               </Link>
             </span>
             <Link href="https://facebook.com/kkmvns" className="text-blue-600">
@@ -167,94 +167,59 @@ export default function Component() {
   </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div id="about-us" className="container space-y-12 mx-auto ">
-            <div className="container mx-auto px-4 max-w-4xl">
-              <div className="space-y-8">
-                {/* About Us Header */}
-                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
-                  About Us
-                </h2>
+           
+          <section id="about-us" className="py-16 bg-white">
+  <div className="container mx-auto px-4 max-w-4xl">
+    <div className="space-y-8">
+      {/* About Us Header */}
+      <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
+        About Us
+      </h2>
 
-                {/* Content and Image Layout */}
-                <div className="flex flex-col md:flex-row items-center gap-8">
-                  {/* Text Content */}
-                  <div className="md:w-1/2 text-left text-gray-700 leading-relaxed">
-                    <p>
-                      Welcome to our esteemed institution, offering a
-                      comprehensive Bachelor of Arts (B.A.) program approved by
-                      the prestigious Mahatma Gandhi Kashi Vidyapeeth in
-                      Varanasi, Uttar Pradesh. Situated in the vibrant city of
-                      Varanasi, our college campus is located in the heart of
-                      Gaur Mirzamurad, pulsating with the rich cultural heritage
-                      and academic fervor that characterizes this historical
-                      city. At our institution, we take pride in providing a
-                      well-rounded education that encompasses a diverse range of
-                      subjects tailored to nurture the intellectual curiosity
-                      and holistic development of our students. Our B.A. program
-                      offers a dynamic curriculum featuring a myriad of subjects
-                      including Hindi, English, Education, Sanskrit, Home
-                      Science, History, and Sociology, ensuring students receive
-                      a multifaceted education that equips them with a broad
-                      spectrum of knowledge and skills. With a focus on academic
-                      excellence, our faculty comprises experienced educators
-                      and scholars who are committed to fostering a stimulating
-                      learning environment where students are encouraged to
-                      engage critically with their subjects and explore their
-                      passions. Through innovative teaching methods,
-                      collaborative projects, and experiential learning
-                      opportunities, we aim to inspire intellectual growth and
-                      cultivate the analytical thinking, communication skills,
-                      and cultural awareness essential for success in today's
-                      interconnected world. Beyond academics, our college offers
-                      a supportive community where students can thrive
-                      personally and professionally. Whether through student
-                      clubs, extracurricular activities, or community outreach
-                      initiatives, we strive to empower our students to become
-                      active participants in society and leaders in their chosen
-                      fields. As you embark on your academic journey, we invite
-                      you to join our vibrant community and discover the endless
-                      possibilities that await you at our institution. Together,
-                      let us embark on a transformative educational experience
-                      that will shape your future and empower you to make a
-                      meaningful impact in the world.
-                    </p>
-                  </div>
+      {/* Content and Image Layout */}
+      <div className="flex flex-col md:flex-row items-center gap-8">
+        {/* Text Content */}
+        <div className="md:w-1/2 text-left text-gray-700 leading-relaxed">
+          <p>
+            Welcome to KKMVNS College, an esteemed institution offering a comprehensive Bachelor of Arts (B.A.) program approved by Mahatma Gandhi Kashi Vidyapeeth, Varanasi, Uttar Pradesh. Located in the heart of Gaur Mirzamurad, Varanasi, our campus thrives with rich cultural heritage and academic excellence. We pride ourselves on providing a well-rounded education with a dynamic curriculum, including subjects like Hindi, English, Education, Sanskrit, Home Science, History, and Sociology. Our experienced faculty fosters a stimulating environment, encouraging critical thinking and holistic development through innovative teaching, projects, and extracurricular activities. Join our vibrant community to shape your future and make a meaningful impact.
+          </p>
+        </div>
 
-                  {/* Campus Image */}
-                  <div className="md:w-1/2">
-                    <img
-                      src="/hero1.png" // Replace with your campus image (e.g., similar to the reference image)
-                      alt="KKMVNS College Campus"
-                      className="w-full rounded-lg shadow-md"
-                    />
-                    {/* GPS Map Camera Icon (Placeholder) */}
-                    <div className="flex justify-center mt-4">
-                      <svg
-                        className="h-6 w-6 text-gray-500"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                        <path
-                          fillRule="evenodd"
-                          d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"
-                          clipRule="evenodd"
-                        />
-                      </svg>
-                      <span className="ml-2 text-gray-500 text-sm">
-                        GPS Map Camera
-                      </span>
-                    </div>
-                  </div>
-                </div>
+        {/* Campus Image */}
+        <div className="md:w-1/2">
+          <img
+            src="/hero1.png" // Replace with your campus image
+            alt="KKMVNS College Campus"
+            className="w-full rounded-lg shadow-md"
+          />
+          {/* GPS Map Camera Icon (Placeholder) */}
+          <div className="flex justify-center mt-4">
+            <svg
+              className="h-6 w-6 text-gray-500"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+              <path
+                fillRule="evenodd"
+                d="M10 2a8 8 0 100 16 8 8 0 000-16zm0 14a6 6 0 110-12 6 6 0 010 12z"
+                clipRule="evenodd"
+              />
+            </svg>
+            <span className="ml-2 text-gray-500 text-sm">GPS Map Camera</span>
+          </div>
+        </div>
+      </div>
 
-                {/* Read More Button */}
-                <div className="text-center mt-6">
-                  <Button className="bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 px-6 py-2 rounded">
-                    Read More
-                  </Button>
-                </div>
-              </div>
-            </div>
+      {/* Read More Button */}
+      <div className="text-center mt-6">
+        <Button className="bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 px-6 py-2 rounded">
+          Read More
+        </Button>
+      </div>
+    </div>
+  </div>
+</section>
             {/* <div id="facilities" className="space-y-4">
               <h2 className="text-3xl font-bold text-black tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
                 Facilities
@@ -292,10 +257,10 @@ export default function Component() {
                   {/* Facilities Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {[
-                      { name: "Zoology Lab", src: "/lab.png" },
-                      { name: "Botany Lab", src: "/lab.png" },
-                      { name: "Physics Lab", src: "/lab.png" },
-                      { name: "Chemistry Lab", src: "/lab.png" },
+                      { name: "Home Science Lab 1", src: "/home.png" },
+                      { name: "Home Science Lab 2", src: "/home.png" },
+                      { name: "Home Science Lab 3", src: "/home.png" },
+                      { name: "Computer Lab", src: "/lab.png" },
                       { name: "Library", src: "/lib.png" },
 
                       { name: "Games & Sport", src: "/sports.png" },
@@ -529,7 +494,7 @@ export default function Component() {
               />
               <div className="text-white">
                 <h3 className="text-lg font-bold">
-                  प्रतिभा उच्च शिक्षा संस्थान
+                किशोरी कमलेश महाविद्यालय
                 </h3>
                 <p className="text-sm">
                   KKMVNS College, Varanasi, Uttar Pradesh
@@ -538,10 +503,10 @@ export default function Component() {
             </div>
             <div className="mt-2 text-sm">
               <p>
-                📍 Firozpur urf Shekhpur, Phulpur Town, Prayagraj, Uttar Pradesh
+                📍 Gaur Mirzamurad Varanasi, Uttar Pradesh
               </p>
-              <p>📞 8707046593 | 8795317303 | 9305233603</p>
-              <p>✉️ Pratibhaus8@gmail.com</p>
+              <p>📞 7985252219 | 9956761690 </p>
+              <p>✉️ kkmvns4@gmail.com</p>
             </div>
           </div>
 

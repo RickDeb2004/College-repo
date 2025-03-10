@@ -52,7 +52,9 @@ export default function Component() {
               <h1 className="text-xl font-bold tracking-tight">
                 किशोरी कमलेश महाविद्यालय
               </h1>
-              <p className="text-sm">KKMVNS College,Gaur Mirzamurad, Varanasi, Uttar Pradesh</p>
+              <p className="text-sm">
+                KKMVNS College,Gaur Mirzamurad, Varanasi, Uttar Pradesh
+              </p>
             </div>
           </div>
           <div className="flex items-center space-x-4 text-sm text-gray-700 flex-wrap justify-center">
@@ -168,7 +170,14 @@ export default function Component() {
             </Link>
           </div>
           <button
-            onClick={toggleNoticeModal}
+            onClick={(e) => {
+              e.stopPropagation(); // Prevent event bubbling
+              toggleNoticeModal(); // Toggle the modal state
+              console.log(
+                "Close button clicked, isNoticeModalOpen:",
+                isNoticeModalOpen
+              ); // Debug log
+            }}
             className="absolute top-2 right-2 text-white hover:text-gray-300"
           >
             <svg
@@ -242,12 +251,21 @@ export default function Component() {
         </div> */}
         <section className="relative w-full min-h-[70vh] flex items-center justify-center">
           <Image
-            src="/hero1.png" // Ensure this image exists in the `public` folder
+            src="/hero_mob.png" // Replace with your mobile-specific hero image
+            alt="Mobile Hero Image"
+            layout="fill"
+            objectFit="cover"
+            className="object-center md:hidden" // Visible only on mobile (below md)
+            priority={true}
+          />
+          {/* Hero Image for Desktop (md and above) */}
+          <Image
+            src="/hero1.png" // Your existing hero image for larger screens
             alt="Hero Image"
             layout="fill"
             objectFit="cover"
-            className="object-center"
-            priority={true} // Load this image eagerly for better performance
+            className="object-center hidden md:block" // Visible only on md and above
+            priority={true}
           />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">

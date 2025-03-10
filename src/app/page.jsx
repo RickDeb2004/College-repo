@@ -26,9 +26,16 @@ export default function Component() {
     setIsNavOpen(!isNavOpen);
   };
   const toggleNoticeModal = () => {
-    setIsNoticeModalOpen(!isNoticeModalOpen);
+    setIsNoticeModalOpen((prev) => {
+      console.log(
+        "Toggling notice modal, previous state:",
+        prev,
+        "new state:",
+        !prev
+      ); // Debug log
+      return !prev;
+    });
   };
-
   const toggleRegistrationModal = () => {
     setIsRegistrationModalOpen(!isRegistrationModalOpen);
   };
@@ -151,7 +158,7 @@ export default function Component() {
       <main className="flex-1 overflow-y-auto bg-white relative">
         {/* Sticky Notice Modal */}
         <div
-          className={`fixed top-20 left-4 z-50 bg-gray-700 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-lg shadow-lg transition-all duration-300${
+          className={`fixed top-20 left-4 z-50 bg-gray-700 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-lg shadow-lg transition-all duration-300 ${
             isNoticeModalOpen ? "block" : "hidden"
           }`}
           style={{ width: "300px" }}
@@ -174,8 +181,8 @@ export default function Component() {
               e.stopPropagation(); // Prevent event bubbling
               toggleNoticeModal(); // Toggle the modal state
               console.log(
-                "Close button clicked, isNoticeModalOpen:",
-                isNoticeModalOpen
+                "Close button clicked, new state should be:",
+                !isNoticeModalOpen
               ); // Debug log
             }}
             className="absolute top-2 right-2 text-white hover:text-gray-300"

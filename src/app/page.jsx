@@ -20,9 +20,17 @@ import HeroCarousel from "@/components/ui/HeroCarousel";
 
 export default function Component() {
   const [isNavOpen, setIsNavOpen] = useState(false);
-
+  const [isNoticeModalOpen, setIsNoticeModalOpen] = useState(true);
+  const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(true);
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
+  };
+  const toggleNoticeModal = () => {
+    setIsNoticeModalOpen(!isNoticeModalOpen);
+  };
+
+  const toggleRegistrationModal = () => {
+    setIsRegistrationModalOpen(!isRegistrationModalOpen);
   };
 
   return (
@@ -44,7 +52,7 @@ export default function Component() {
               <h1 className="text-xl font-bold tracking-tight">
                 किशोरी कमलेश महाविद्यालय
               </h1>
-              <p className="text-sm">KKMVNS College, Varanasi, Uttar Pradesh</p>
+              <p className="text-sm">KKMVNS College,Gaur Mirzamurad, Varanasi, Uttar Pradesh</p>
             </div>
           </div>
           <div className="flex items-center space-x-4 text-sm text-gray-700 flex-wrap justify-center">
@@ -138,7 +146,83 @@ export default function Component() {
         <div className="h-1 bg-yellow-400"></div>
       </header>
 
-      <main className="flex-1 overflow-y-auto bg-white">
+      <main className="flex-1 overflow-y-auto bg-white relative">
+        {/* Sticky Notice Modal */}
+        <div
+          className={`fixed top-20 left-4 z-50 bg-gray-700 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-lg shadow-lg transition-all duration-300${
+            isNoticeModalOpen ? "block" : "hidden"
+          }`}
+          style={{ width: "300px" }}
+        >
+          <h3 className="text-lg font-bold mb-2">NOTICE BOARD</h3>
+
+          <p className="text-sm">
+            KKMVNS College launches their anti-ragging declartion.
+          </p>
+          <div className="mt-4 flex flex-col space-y-2">
+            <Link
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9" // Replace with your actual notice document link
+              className="text-blue-300 hover:underline"
+            >
+              Anti Ragging Declaration
+            </Link>
+          </div>
+          <button
+            onClick={toggleNoticeModal}
+            className="absolute top-2 right-2 text-white hover:text-gray-300"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
+
+        {/* Sticky Registration Modal */}
+        <div
+          className={`fixed top-20 right-4 z-50 bg-blue-600 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-lg shadow-lg transition-all duration-300 ${
+            isRegistrationModalOpen ? "block" : "hidden"
+          }`}
+          style={{ width: "300px" }}
+        >
+          <h3 className="text-lg font-bold mb-2">STAFF DECLARATION</h3>
+
+          <div className="mt-4">
+            <Link
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3" // Replace with your actual registration form link
+              className="text-red-300 hover:underline block mb-2"
+            >
+              LINK
+            </Link>
+          </div>
+          <button
+            onClick={toggleRegistrationModal}
+            className="absolute top-2 right-2 text-white hover:text-gray-300"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+        </div>
         {/* <section className="flex items-center justify-center w-full min-h-screen py-16 text-center bg-white">
           <div id="home" className="container space-y-4">
             <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-3xl md:text-5xl xl:text-7xl">
@@ -273,7 +357,7 @@ export default function Component() {
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {[
                       { name: "Home Science Lab 1", src: "/home.png" },
-                      { name: "Home Science Lab 2", src: "/home2.png" },
+                      { name: "Education Lab", src: "/home2.png" },
                       { name: "Home Science Lab 3", src: "/home3.png" },
                       { name: "Home Science Lab 4", src: "/home4.png" },
                       { name: "Computer Lab", src: "/lab.png" },
@@ -324,11 +408,7 @@ export default function Component() {
                         </CardTitle>
                       </CardHeader>
                       <CardContent></CardContent>
-                      <CardFooter className="flex justify-center">
-                        <Button size="sm" variant="outline">
-                          View Course
-                        </Button>
-                      </CardFooter>
+                      <CardFooter className="flex justify-center"></CardFooter>
                     </Card>
                   ))}
                 </div>

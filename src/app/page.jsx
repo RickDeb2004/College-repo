@@ -439,6 +439,78 @@ export default function Component() {
                 </div>
               </div>
             </section>
+            {/* <section id="courses" className="py-16 bg-white">
+              <div className="container mx-auto px-4 max-w-5xl">
+                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
+                  Notices
+                </h2>
+                <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
+                  {[
+                    "  KKMVNS College launches their anti-ragging declartion ",
+                    "STAFF DECLARATION",
+                  
+                  ].map((course) => (
+                    <Card
+                      key={course}
+                      className="md:h-15rem lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)]" // Blue glow effect on hover
+                    >
+                      <CardHeader>
+                        <CardTitle className="text-lg md:text-xl text-center text-black">
+                          {" "}
+                          <Link
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9" // Replace with your actual notice document link
+              className="text-blue-300 hover:underline"
+            >
+              Anti Ragging Declaration
+            </Link>
+                      
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent></CardContent>
+                      <CardFooter className="flex justify-center"></CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section> */}
+            <section id="courses" className="py-16 bg-white">
+              <div className="container mx-auto px-4 max-w-5xl">
+                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
+                  Notices
+                </h2>
+                <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
+                  {[
+                    {
+                      title:
+                        "KKMVNS College launches their anti-ragging declaration",
+                      link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9",
+                    },
+                    {
+                      title: "STAFF DECLARATION",
+                      link: "https://example.com/staff-declaration.pdf", // Replace with actual link
+                    },
+                  ].map((notice) => (
+                    <Card
+                      key={notice.title}
+                      className="md:h-15rem lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)]" // Blue glow effect on hover
+                    >
+                      <CardHeader>
+                        <CardTitle className="text-lg md:text-xl text-center text-black">
+                          <Link
+                            href={notice.link}
+                            className="text-black hover:underline"
+                          >
+                            {notice.title}
+                          </Link>
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent></CardContent>
+                      <CardFooter className="flex justify-center"></CardFooter>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -502,7 +574,7 @@ export default function Component() {
             <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
               Boards of Trustees
             </h2>
-            <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
+            <div className="grid max-w-3xl gap-2 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-4">
               {[
                 { role: "Manager", name: "Sanjay Singh" },
                 { role: "President", name: "Saksham Singh" },

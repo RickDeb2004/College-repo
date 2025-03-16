@@ -17,11 +17,16 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import HeroCarousel from "@/components/ui/HeroCarousel";
+import Calendar from "react-calendar"; // Import React Calendar
+
+import "react-calendar/dist/Calendar.css"; // Import CSS for React Calendar
 
 export default function Component() {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isNoticeModalOpen, setIsNoticeModalOpen] = useState(true);
+  const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(true);
+  const [date, setDate] = useState(new Date());
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -39,7 +44,9 @@ export default function Component() {
   const toggleRegistrationModal = () => {
     setIsRegistrationModalOpen(!isRegistrationModalOpen);
   };
-
+  const toggleCalendar = () => {
+    setIsCalendarOpen(!isCalendarOpen);
+  };
   return (
     <div className="flex flex-col min-h-screen font-sans">
       {/* Header */}
@@ -276,6 +283,21 @@ export default function Component() {
           />
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
+          <div id="thought-of-the-day" className="container space-y-12 mx-auto">
+            {/* Thought of the Day Section */}
+            <section className="py-8 bg-blue-800 text-white">
+              <div className="container mx-auto px-4 max-w-5xl text-center">
+                <h2 className="text-3xl font-bold tracking-tight uppercase mb-4">
+                  Thought of the Day
+                </h2>
+                <p className="text-sm italic mb-2">Today's Quote</p>
+                <p className="text-lg font-medium">
+                  "The true art of memory is the art of attention."
+                </p>
+                <p className="text-sm mt-2">— Samuel Johnson</p>
+              </div>
+            </section>
+          </div>
           <div id="about-us" className="container space-y-12 mx-auto ">
             <section id="about-us" className="py-16 bg-white">
               <div className="container mx-auto px-4 max-w-4xl">
@@ -336,11 +358,7 @@ export default function Component() {
                   </div>
 
                   {/* Read More Button */}
-                  <div className="text-center mt-6">
-                    <Button className="bg-white border border-gray-300 text-gray-700 hover:bg-gray-100 px-6 py-2 rounded">
-                      Read More
-                    </Button>
-                  </div>
+                  <div className="text-center mt-6"></div>
                 </div>
               </div>
             </section>
@@ -487,7 +505,7 @@ export default function Component() {
                     },
                     {
                       title: "STAFF DECLARATION",
-                      link: "https://example.com/staff-declaration.pdf", // Replace with actual link
+                      link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3", // Replace with actual link
                     },
                   ].map((notice) => (
                     <Card
@@ -574,7 +592,7 @@ export default function Component() {
             <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
               Boards of Trustees
             </h2>
-            <div className="grid max-w-3xl gap-2 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-4">
+            <div className="grid max-w-3xl gap-6 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
               {[
                 { role: "Manager", name: "Sanjay Singh" },
                 { role: "President", name: "Saksham Singh" },
@@ -583,27 +601,25 @@ export default function Component() {
               ].map((trustee, index) => (
                 <Card
                   key={index}
-                  className="md:h-15rem lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)]" // Blue glow effect on hover
+                  className="md:h-40 lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)] rounded-lg border border-gray-300"
                 >
-                  <CardHeader>
-                    <CardTitle className="text-lg md:text-xl text-center text-black">
+                  <CardHeader className="text-center py-4">
+                    <CardTitle className="text-lg md:text-xl text-black">
                       {trustee.role}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="flex justify-center items-center h-full">
-                    <p className="text-black text-center font-bold">
+                  <CardContent className="flex justify-center items-center h-20">
+                    <p className="text-black text-center font-bold text-lg mt-4">
                       {trustee.name}
                     </p>
                   </CardContent>
-                  <CardFooter className="flex justify-center">
-                    {/* No button needed for trustees, but keeping footer for consistency */}
-                  </CardFooter>
+                  <CardFooter className="flex justify-center"></CardFooter>
                 </Card>
               ))}
             </div>
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container mx-auto px-4 flex justify-center">
             <div className="flex flex-col md:flex-row items-center gap-6">
               {[
@@ -618,7 +634,6 @@ export default function Component() {
                   href={item.link}
                   className="relative w-24 h-24 bg-blue-800 text-white flex flex-col items-center justify-center rounded-lg transition-all duration-300 ease-in-out hover:rounded-full hover:bg-red-500 hover:w-24 hover:h-24"
                 >
-                  {/* Icon */}
                   {item.icon === "microscope" && (
                     <svg
                       className="w-8 h-8 mb-2"
@@ -665,11 +680,120 @@ export default function Component() {
                       <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
                     </svg>
                   )}
-                  <span className="text-sm font-medium">{item.name}</span>
+                  <span className="text-sm font-medium text-center">
+                    {item.name}
+                  </span>
                 </Link>
               ))}
             </div>
           </div>
+        </section> */}
+        <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+          <div className="container mx-auto px-4 flex justify-center">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              {[
+                { name: "Facilities", icon: "microscope", link: "#facilities" },
+                { name: "Virtual Tour", icon: "360", link: "#virtual-tour" },
+                { name: "News & Notices", icon: "news", link: "#news" },
+                { name: "Event Calendar", icon: "calendar", link: "#events" },
+                { name: "Downloads", icon: "download", link: "/down.pdf" },
+              ].map((item) => (
+                <div
+                  key={item.name}
+                  onClick={
+                    item.name === "Event Calendar" ? toggleCalendar : undefined
+                  }
+                  className="relative w-24 h-24 bg-blue-800 text-white flex flex-col items-center justify-center rounded-lg transition-all duration-300 ease-in-out hover:rounded-full hover:bg-red-500 hover:w-24 hover:h-24 cursor-pointer"
+                >
+                  {item.icon === "microscope" && (
+                    <svg
+                      className="w-8 h-8 mb-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
+                    </svg>
+                  )}
+                  {item.icon === "360" && (
+                    <svg
+                      className="w-8 h-8 mb-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                      <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
+                    </svg>
+                  )}
+                  {item.icon === "news" && (
+                    <svg
+                      className="w-8 h-8 mb-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 5h14v2H5zM5 11h14v2H5zM5 17h14v2H5z" />
+                    </svg>
+                  )}
+                  {item.icon === "calendar" && (
+                    <svg
+                      className="w-8 h-8 mb-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
+                    </svg>
+                  )}
+                  {item.icon === "download" && (
+                    <svg
+                      className="w-8 h-8 mb-2"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
+                    </svg>
+                  )}
+                  <span className="text-sm font-medium text-center">
+                    {item.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Calendar Modal */}
+          {isCalendarOpen && (
+            <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+              <div className="bg-white p-6 rounded-lg shadow-lg">
+                <style jsx>{`
+                  /* Override react-calendar weekday labels to use black text */
+                  .react-calendar__month-view__weekdays__weekday {
+                    color: black !important;
+                    font-weight: bold;
+                  }
+                  /* Optional: Style the calendar days for better visibility */
+                  .react-calendar__tile {
+                    color: black;
+                  }
+                  /* Optional: Style the current day */
+                  .react-calendar__tile--now {
+                    background: #e0f7fa !important;
+                    color: black !important;
+                  }
+                  /* Optional: Style the selected day */
+                  .react-calendar__tile--active {
+                    background: #0070f3 !important;
+                    color: white !important;
+                  }
+                `}</style>
+                <Calendar onChange={setDate} value={date} />
+                <Button
+                  onClick={toggleCalendar}
+                  className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+                >
+                  Close
+                </Button>
+              </div>
+            </div>
+          )}
         </section>
       </main>
 

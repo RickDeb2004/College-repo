@@ -17,9 +17,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 import HeroCarousel from "@/components/ui/HeroCarousel";
-import Calendar from "react-calendar"; // Import React Calendar
+import Calendar from "react-calendar";
 
-import "react-calendar/dist/Calendar.css"; // Import CSS for React Calendar
+import "react-calendar/dist/Calendar.css";
 
 export default function Component() {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -27,6 +27,7 @@ export default function Component() {
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
   const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(true);
   const [date, setDate] = useState(new Date());
+
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
@@ -37,7 +38,7 @@ export default function Component() {
         prev,
         "new state:",
         !prev
-      ); // Debug log
+      );
       return !prev;
     });
   };
@@ -47,16 +48,36 @@ export default function Component() {
   const toggleCalendar = () => {
     setIsCalendarOpen(!isCalendarOpen);
   };
+
   return (
     <div className="flex flex-col min-h-screen font-sans">
       {/* Header */}
-
+      <div className="bg-red-800 text-white text-sm py-1 px-4 flex flex-col sm:flex-row items-center justify-between font-medium">
+        <div className="flex items-center space-x-2">
+          <span className="hidden sm:inline-block">
+            📢 Public self-Disclosure as Required vide ugc letter no F.14-4/2023
+            cppl
+          </span>
+          <a
+            href="#"
+            className="underline font-semibold hover:text-yellow-300 transition"
+          >
+            Click Here
+          </a>
+        </div>
+        <div className="flex items-center space-x-2 mt-1 sm:mt-0">
+          <span>
+            College Code: <span className="font-bold">086</span>
+          </span>
+          <span className="text-green-400 font-bold">📞 9450527744</span>
+        </div>
+      </div>
       <header className="relative">
         {/* Top Header with Logo and Institution Name */}
         <div className="bg-gradient-to-b from-sky-200 to-sky-100 py-4 px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center space-x-4">
             <Image
-              src="/logo.png" // Replace with your logo (e.g., the circular logo from the image)
+              src="/logo.png"
               alt="KKMVNS College Logo"
               width={60}
               height={60}
@@ -67,7 +88,7 @@ export default function Component() {
                 किशोरी कमलेश महाविद्यालय
               </h1>
               <p className="text-sm">
-                KKMVNS College,Gaur Mirzamurad, Varanasi, Uttar Pradesh
+                KKMVNS College, Gaur Mirzamurad, Varanasi, Uttar Pradesh
               </p>
             </div>
           </div>
@@ -90,7 +111,6 @@ export default function Component() {
         {/* Navigation Bar */}
         <nav className="bg-blue-800 text-white py-2 px-4 sm:px-6">
           <div className="flex items-center justify-between">
-            {/* Hamburger for Mobile */}
             <button className="block md:hidden text-white" onClick={toggleNav}>
               <svg
                 className="h-6 w-6"
@@ -107,7 +127,6 @@ export default function Component() {
               </svg>
             </button>
 
-            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-6">
               {[
                 "Home",
@@ -131,7 +150,6 @@ export default function Component() {
             </div>
           </div>
 
-          {/* Mobile Navigation */}
           {isNavOpen && (
             <div className="md:hidden flex flex-col items-center py-4 space-y-4 bg-blue-800">
               {[
@@ -171,13 +189,12 @@ export default function Component() {
           style={{ width: "300px" }}
         >
           <h3 className="text-lg font-bold mb-2">NOTICE BOARD</h3>
-
           <p className="text-sm">
-            KKMVNS College launches their anti-ragging declartion.
+            KKMVNS College launches their anti-ragging declaration.
           </p>
           <div className="mt-4 flex flex-col space-y-2">
             <Link
-              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9" // Replace with your actual notice document link
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9"
               className="text-blue-300 hover:underline"
             >
               Anti Ragging Declaration
@@ -185,12 +202,12 @@ export default function Component() {
           </div>
           <button
             onClick={(e) => {
-              e.stopPropagation(); // Prevent event bubbling
-              toggleNoticeModal(); // Toggle the modal state
+              e.stopPropagation();
+              toggleNoticeModal();
               console.log(
                 "Close button clicked, new state should be:",
                 !isNoticeModalOpen
-              ); // Debug log
+              );
             }}
             className="absolute top-2 right-2 text-white hover:text-gray-300"
           >
@@ -218,10 +235,9 @@ export default function Component() {
           style={{ width: "300px" }}
         >
           <h3 className="text-lg font-bold mb-2">STAFF DECLARATION</h3>
-
           <div className="mt-4">
             <Link
-              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3" // Replace with your actual registration form link
+              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3"
               className="text-red-300 hover:underline block mb-2"
             >
               LINK
@@ -246,45 +262,81 @@ export default function Component() {
             </svg>
           </button>
         </div>
-        {/* <section className="flex items-center justify-center w-full min-h-screen py-16 text-center bg-white">
-          <div id="home" className="container space-y-4">
-            <h1 className="text-4xl font-bold tracking-tighter text-black lg:leading-tighter/none sm:text-3xl md:text-5xl xl:text-7xl">
-              Welcome to KKMVNS College
-            </h1>
-            <p className="mx-auto  max-w-[600px] text-black md:text-lg sm:text-md dark:text-black">
-              Where the future is bright and the learning never stops.
-            </p>
+
+        {/* Hero Section with Officials on the Right */}
+        <section className="relative w-full min-h-[70vh] flex flex-col md:flex-row">
+          {/* Hero Image */}
+          <div className="relative w-full md:w-2/3 h-[70vh]">
+            <Image
+              src="/hero1.png"
+              alt="Campus Image"
+              layout="fill"
+              objectFit="cover"
+              className="object-center"
+              priority={true}
+            />
+            <div className="absolute bottom-0 w-full bg-[#98002e] h-8 flex items-center overflow-hidden">
+              <div className="whitespace-nowrap animate-marquee text-white text-sm font-medium px-4">
+                28 January 2025 ⇒ Admission Open For Session 2025
+              </div>
+            </div>
+          </div>
+
+          {/* Officials Section */}
+          <div className="w-full md:w-1/3 bg-white p-6 flex flex-col space-y-6">
+            {/* Card Component */}
+            {[
+              {
+                title: "Vice-Chancellor (MSDSU)",
+                name: "Prof. Sanjeev Kumar",
+                role: "Vice-Chancellor",
+                org: "Maharaja Suhel Dev State University, Azamgarh",
+                img: "/vc.jpg", // Replace with actual path
+              },
+              {
+                title: "District Magistrate (Mau)",
+                name: "Shri Praveen Mishra, IAS",
+                role: "District Magistrate",
+                org: "Mau",
+                img: "/dm.jpg", // Replace with actual path
+              },
+              {
+                title: "Manager",
+                name: "Mr. Pravin Kumar Rai",
+                role: "Manager",
+                org: "B.S.R.K. URMILA MAHILA MAHAVIDYALAYA",
+                img: "/manager.jpg", // Replace with actual path
+              },
+            ].map((person) => (
+              <div
+                key={person.name}
+                className="border border-gray-200 shadow-sm rounded-md overflow-hidden"
+              >
+                <div className="bg-gray-100 px-4 py-2 border-l-4 border-[#d63384]">
+                  <h2 className="text-md font-semibold text-[#d63384]">
+                    {person.title}
+                  </h2>
+                </div>
+                <div className="flex items-center p-4 space-x-4">
+                  <img
+                    src={person.img}
+                    alt={person.name}
+                    className="w-20 h-20 rounded-full object-cover border-2 border-gray-300"
+                  />
+                  <div>
+                    <p className="font-bold text-gray-800">{person.name}</p>
+                    <p className="text-gray-700">{person.role}</p>
+                    <p className="text-gray-700">{person.org}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
-        <div className="mt-4">
-          <img
-            src="/WhatsApp Image 2024-03-14 at 21.32.12.jpeg"
-            alt="hero"
-            className="mx-auto"
-          />
-        </div> */}
-        <section className="relative w-full min-h-[70vh] flex items-center justify-center">
-          <Image
-            src="/hero_mob.png" // Replace with your mobile-specific hero image
-            alt="Mobile Hero Image"
-            layout="fill"
-            objectFit="cover"
-            className="object-center md:hidden" // Visible only on mobile (below md)
-            priority={true}
-          />
-          {/* Hero Image for Desktop (md and above) */}
-          <Image
-            src="/hero1.png" // Your existing hero image for larger screens
-            alt="Hero Image"
-            layout="fill"
-            objectFit="cover"
-            className="object-center hidden md:block" // Visible only on md and above
-            priority={true}
-          />
-        </section>
+
+        {/* Rest of the sections remain unchanged */}
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div id="thought-of-the-day" className="container space-y-12 mx-auto">
-            {/* Thought of the Day Section */}
             <section className="py-8 bg-blue-800 text-white">
               <div className="container mx-auto px-4 max-w-5xl text-center">
                 <h2 className="text-3xl font-bold tracking-tight uppercase mb-4">
@@ -298,18 +350,151 @@ export default function Component() {
               </div>
             </section>
           </div>
-          <div id="about-us" className="container space-y-12 mx-auto ">
+          <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
+            <div className="container mx-auto px-4 max-w-5xl">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* What's New Column */}
+                <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                  <h2 className="text-xl font-bold text-blue-800 mb-4 uppercase border-b-2 border-yellow-400 pb-2">
+                    What's New
+                  </h2>
+                  <div className="space-y-4">
+                    <div>
+                      <p className="text-gray-700">
+                        <span className="text-blue-600 font-medium">
+                          28 Jan-25
+                        </span>{" "}
+                        Admission Open for Session 2025-26
+                      </p>
+                      <p className="text-sm text-gray-500">READ MORE</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-700">
+                        <span className="text-blue-600 font-medium">
+                          26 Jan-25
+                        </span>{" "}
+                        Admission Open for Session 2025-26
+                      </p>
+                      <p className="text-sm text-gray-500">READ MORE</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-700">
+                        <span className="text-blue-600 font-medium">
+                          27 Jan-25
+                        </span>{" "}
+                        Welcome to B.S.R.K. Urmila Mahila Mahavidyalaya,
+                        Ramnagar Khalisa, Mau
+                      </p>
+                      <p className="text-sm text-gray-500">READ MORE</p>
+                    </div>
+                    <p className="text-blue-600 text-sm hover:underline">
+                      More News
+                    </p>
+                  </div>
+                </div>
+
+                {/* Student Zone Column */}
+                <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                  <h2 className="text-xl font-bold text-blue-800 mb-4 uppercase border-b-2 border-yellow-400 pb-2">
+                    Student Zone
+                  </h2>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=Anti+Ragging"
+                        alt="Anti Ragging"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">Anti Ragging Committee</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=Sexual+Harassment"
+                        alt="Sexual Harassment"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">
+                        Sexual Harassment Committee
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=Internal+Complaint"
+                        alt="Internal Complaint"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">
+                        Internal Complaint Committee
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=Students+Grievance"
+                        alt="Students Grievance"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">
+                        Students Grievance and Redressal
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Others Column */}
+                <div className="bg-gray-100 p-4 rounded-lg shadow-md">
+                  <h2 className="text-xl font-bold text-blue-800 mb-4 uppercase border-b-2 border-yellow-400 pb-2">
+                    Others
+                  </h2>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=RTI"
+                        alt="RTI"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">Right to Information</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=IQAC"
+                        alt="IQAC"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">
+                        Internal Quality Assurance Cell
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=NSS"
+                        alt="NSS"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">National Service Scheme</p>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="https://via.placeholder.com/40?text=NCC"
+                        alt="NCC"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <p className="text-gray-700">
+                        Students National Construction Code
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div id="about-us" className="container space-y-12 mx-auto">
             <section id="about-us" className="py-16 bg-white">
               <div className="container mx-auto px-4 max-w-4xl">
                 <div className="space-y-8">
-                  {/* About Us Header */}
                   <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
                     About Us
                   </h2>
-
-                  {/* Content and Image Layout */}
                   <div className="flex flex-col md:flex-row items-center gap-8">
-                    {/* Text Content */}
                     <div className="md:w-1/2 text-left text-gray-700 leading-relaxed">
                       <p>
                         Welcome to KKMVNS College, an esteemed institution
@@ -328,15 +513,12 @@ export default function Component() {
                         to shape your future and make a meaningful impact.
                       </p>
                     </div>
-
-                    {/* Campus Image */}
                     <div className="md:w-1/2">
                       <img
-                        src="/hero1.png" // Replace with your campus image
+                        src="/hero1.png"
                         alt="KKMVNS College Campus"
                         className="w-full rounded-lg shadow-md"
                       />
-                      {/* GPS Map Camera Icon (Placeholder) */}
                       <div className="flex justify-center mt-4">
                         <svg
                           className="h-6 w-6 text-gray-500"
@@ -356,47 +538,21 @@ export default function Component() {
                       </div>
                     </div>
                   </div>
-
-                  {/* Read More Button */}
-                  <div className="text-center mt-6"></div>
                 </div>
               </div>
             </section>
-            {/* <div id="facilities" className="space-y-4">
-              <h2 className="text-3xl font-bold text-black tracking-tighter lg:leading-tighter/none sm:text-4xl md:text-5xl text-center">
-                Facilities
-              </h2>
-              <ul className="text-black dark:text-black text-center ">
-                <li className="py-2">✦WiFi-enabled campus</li>
-                <li className="py-2">✦CCTV surveillance across the campus</li>
-                <li className="py-2">
-                  ✦Travel vehicles available for students
-                </li>
-                <li className="py-2"> ✦Well-equipped laboratories</li>
-                <li className="py-2">✦Spacious playing ground</li>
-                <li className="py-2">
-                  ✦ Smart classrooms with modern technology
-                </li>
-                <li className="py-2">✦Biometric attendance system</li>
-              </ul>
-            </div> */}
             <section id="facilities" className="py-16 bg-white">
               <div className="container mx-auto px-4 max-w-5xl">
                 <div className="space-y-8">
-                  {/* Facilities Header */}
                   <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
                     Our Facilities
                   </h2>
-
-                  {/* Introductory Paragraph */}
                   <p className="text-gray-700 text-left max-w-3xl mx-auto leading-relaxed">
                     At KKMVNS College, we provide exceptional facilities to
                     enhance the learning experience. Our well-equipped
                     infrastructure is designed to support both academic and
                     extracurricular activities.
                   </p>
-
-                  {/* Facilities Grid */}
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {[
                       { name: "Home Science Lab 1", src: "/home.png" },
@@ -405,12 +561,11 @@ export default function Component() {
                       { name: "Home Science Lab 4", src: "/home4.png" },
                       { name: "Computer Lab", src: "/lab.png" },
                       { name: "Library", src: "/lib.png" },
-
                       { name: "Games & Sport", src: "/sports.png" },
                     ].map((facility) => (
                       <div key={facility.name} className="text-center">
                         <img
-                          src={facility.src} // Replace with your actual facility images
+                          src={facility.src}
                           alt={facility.name}
                           className="w-full h-48 object-cover rounded-lg shadow-md"
                         />
@@ -423,112 +578,93 @@ export default function Component() {
                 </div>
               </div>
             </section>
+            <section id="courses" className="py-16 bg-[#14487A]">
+              <div className="container mx-auto px-4 max-w-7xl">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                  {/* Left Side: Courses Offered */}
+                  <div>
+                    <h2 className="text-white text-2xl font-semibold border-b border-[#B5D044] pb-2 mb-6">
+                      COURSES OFFERED
+                    </h2>
+                    <div className="grid grid-cols-2 gap-6">
+                      {/* B.A. Card */}
+                      <div className="relative bg-[#4CA7B3] h-40 flex items-center justify-center">
+                        <img
+                          src="/ba.jpg" // Use the correct image path
+                          alt="B.A."
+                          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
+                        />
+                        <span className="text-white text-2xl font-bold z-10">
+                          B.A.
+                        </span>
+                      </div>
 
-            <section id="courses" className="py-16 bg-white">
-              <div className="container mx-auto px-4 max-w-5xl">
-                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
-                  Courses
-                </h2>
-                <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
-                  {[
-                    "Hindi",
-                    "Sanskrit",
-                    "English",
-                    "Home Science",
-                    "History",
-                    "Sociology",
-                    "Education",
-                  ].map((course) => (
-                    <Card
-                      key={course}
-                      className="md:h-15rem lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)]" // Blue glow effect on hover
-                    >
-                      <CardHeader>
-                        <CardTitle className="text-lg md:text-xl text-center text-black">
-                          {" "}
-                          {/* Black text for title */}
-                          Bachelor of Arts (B.A.) in {course}
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent></CardContent>
-                      <CardFooter className="flex justify-center"></CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </section>
-            {/* <section id="courses" className="py-16 bg-white">
-              <div className="container mx-auto px-4 max-w-5xl">
-                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
-                  Notices
-                </h2>
-                <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
-                  {[
-                    "  KKMVNS College launches their anti-ragging declartion ",
-                    "STAFF DECLARATION",
-                  
-                  ].map((course) => (
-                    <Card
-                      key={course}
-                      className="md:h-15rem lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)]" // Blue glow effect on hover
-                    >
-                      <CardHeader>
-                        <CardTitle className="text-lg md:text-xl text-center text-black">
-                          {" "}
-                          <Link
-              href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9" // Replace with your actual notice document link
-              className="text-blue-300 hover:underline"
-            >
-              Anti Ragging Declaration
-            </Link>
-                      
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent></CardContent>
-                      <CardFooter className="flex justify-center"></CardFooter>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </section> */}
-            <section id="courses" className="py-16 bg-white">
-              <div className="container mx-auto px-4 max-w-5xl">
-                <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
-                  Notices
-                </h2>
-                <div className="grid max-w-3xl gap-4 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
-                  {[
-                    {
-                      title:
-                        "KKMVNS College launches their anti-ragging declaration",
-                      link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9",
-                    },
-                    {
-                      title: "STAFF DECLARATION",
-                      link: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3", // Replace with actual link
-                    },
-                  ].map((notice) => (
-                    <Card
-                      key={notice.title}
-                      className="md:h-15rem lg:col-span-1 xl:col-span-1 transition-all duration-300 ease-in-out hover:shadow-[0_0_15px_5px_rgba(0,112,255,0.5)]" // Blue glow effect on hover
-                    >
-                      <CardHeader>
-                        <CardTitle className="text-lg md:text-xl text-center text-black">
-                          <Link
-                            href={notice.link}
-                            className="text-black hover:underline"
+                      {/* B.Sc. Card */}
+                      <div className="relative bg-[#4CA7B3] h-40 flex items-center justify-center">
+                        <img
+                          src="/bsc.jpg" // Use the correct image path
+                          alt="B.Sc."
+                          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
+                        />
+                        <span className="text-white text-2xl font-bold z-10">
+                          B.SC.
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side: Approval Letters */}
+                  <div>
+                    <h2 className="text-white text-2xl font-semibold border-b border-[#B5D044] pb-2 mb-6">
+                      APPROVAL LETTERS
+                    </h2>
+                    <div className="flex flex-col gap-4">
+                      {[
+                        {
+                          name: "B.A., B.SC. AFFILIATION",
+                          file: "/approval/ba_bsc_affiliation.pdf",
+                        },
+                        {
+                          name: "PRINCIPAL ANUMODAN LETTER",
+                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3",
+                        },
+                        {
+                          name: "TEACHER ANUMODAN",
+                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9",
+                        },
+                      ].map((doc) => (
+                        <a
+                          key={doc.name}
+                          href={doc.file}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="bg-[#96C121] text-white px-6 py-3 font-medium text-sm flex items-center gap-2 hover:opacity-90 transition rounded-sm w-fit"
+                          download
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
                           >
-                            {notice.title}
-                          </Link>
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent></CardContent>
-                      <CardFooter className="flex justify-center"></CardFooter>
-                    </Card>
-                  ))}
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M4 16v1a2 2 0 002 2h12a2 2 0 002-2v-1M12 12v8m0 0l-4-4m4 4l4-4M12 4v8"
+                            />
+                          </svg>
+                          {doc.name}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </section>
+
+           
           </div>
         </section>
         <section className="w-full py-12 md:py-24 lg:py-32">
@@ -573,7 +709,6 @@ export default function Component() {
                   width={400}
                 />
               </Card>
-
               <Card>
                 <img
                   alt="Events"
@@ -586,7 +721,6 @@ export default function Component() {
             </div>
           </div>
         </section>
-
         <section id="trustees" className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
@@ -619,75 +753,6 @@ export default function Component() {
             </div>
           </div>
         </section>
-        {/* <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
-          <div className="container mx-auto px-4 flex justify-center">
-            <div className="flex flex-col md:flex-row items-center gap-6">
-              {[
-                { name: "Facilities", icon: "microscope", link: "#facilities" },
-                { name: "Virtual Tour", icon: "360", link: "#virtual-tour" },
-                { name: "News & Notices", icon: "news", link: "#news" },
-                { name: "Event Calendar", icon: "calendar", link: "#events" },
-                { name: "Downloads", icon: "download", link: "/down.pdf" },
-              ].map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.link}
-                  className="relative w-24 h-24 bg-blue-800 text-white flex flex-col items-center justify-center rounded-lg transition-all duration-300 ease-in-out hover:rounded-full hover:bg-red-500 hover:w-24 hover:h-24"
-                >
-                  {item.icon === "microscope" && (
-                    <svg
-                      className="w-8 h-8 mb-2"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-8 12c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" />
-                    </svg>
-                  )}
-                  {item.icon === "360" && (
-                    <svg
-                      className="w-8 h-8 mb-2"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
-                      <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" />
-                    </svg>
-                  )}
-                  {item.icon === "news" && (
-                    <svg
-                      className="w-8 h-8 mb-2"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 5h14v2H5zM5 11h14v2H5zM5 17h14v2H5z" />
-                    </svg>
-                  )}
-                  {item.icon === "calendar" && (
-                    <svg
-                      className="w-8 h-8 mb-2"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.11 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10z" />
-                    </svg>
-                  )}
-                  {item.icon === "download" && (
-                    <svg
-                      className="w-8 h-8 mb-2"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z" />
-                    </svg>
-                  )}
-                  <span className="text-sm font-medium text-center">
-                    {item.name}
-                  </span>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section> */}
         <section className="w-full py-12 md:py-24 lg:py-32 bg-white">
           <div className="container mx-auto px-4 flex justify-center">
             <div className="flex flex-col md:flex-row items-center gap-6">
@@ -759,26 +824,21 @@ export default function Component() {
             </div>
           </div>
 
-          {/* Calendar Modal */}
           {isCalendarOpen && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
               <div className="bg-white p-6 rounded-lg shadow-lg">
                 <style jsx>{`
-                  /* Override react-calendar weekday labels to use black text */
                   .react-calendar__month-view__weekdays__weekday {
                     color: black !important;
                     font-weight: bold;
                   }
-                  /* Optional: Style the calendar days for better visibility */
                   .react-calendar__tile {
                     color: black;
                   }
-                  /* Optional: Style the current day */
                   .react-calendar__tile--now {
                     background: #e0f7fa !important;
                     color: black !important;
                   }
-                  /* Optional: Style the selected day */
                   .react-calendar__tile--active {
                     background: #0070f3 !important;
                     color: white !important;
@@ -799,11 +859,10 @@ export default function Component() {
 
       <footer className="bg-gray-800 text-white py-4 px-6">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
-          {/* Logo and Contact Info */}
           <div className="flex flex-col items-start mb-4 md:mb-0">
             <div className="flex items-center space-x-4">
               <Image
-                src="/logo.png" // Replace with your logo (e.g., the "P" logo from the image)
+                src="/logo.png"
                 alt="KKMVNS College Logo"
                 width={60}
                 height={60}
@@ -818,14 +877,11 @@ export default function Component() {
             </div>
             <div className="mt-2 text-sm">
               <p>📍 Gaur Mirzamurad Varanasi, Uttar Pradesh</p>
-              <p>📞 7985252219 | 9956761690 </p>
+              <p>📞 7985252219 | 9956761690</p>
               <p>✉️ kkmvns4@gmail.com</p>
             </div>
           </div>
-
-          {/* Links Columns */}
           <div className="flex flex-col md:flex-row gap-8 text-sm">
-            {/* User Links */}
             <div>
               <h4 className="font-bold mb-2">User Links</h4>
               <ul className="space-y-2">
@@ -891,8 +947,6 @@ export default function Component() {
                 </li>
               </ul>
             </div>
-
-            {/* Education Details */}
             <div>
               <h4 className="font-bold mb-2">Education Details</h4>
               <ul className="space-y-2">
@@ -946,8 +1000,6 @@ export default function Component() {
                 </li>
               </ul>
             </div>
-
-            {/* Quick Links */}
             <div>
               <h4 className="font-bold mb-2">Quick Links</h4>
               <ul className="space-y-2">
@@ -966,8 +1018,6 @@ export default function Component() {
               </ul>
             </div>
           </div>
-
-          {/* Scroll to Top Button */}
           <div className="mt-4 md:mt-0">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}

@@ -164,6 +164,7 @@ export default function Component() {
                 "Downloads",
                 "Gallery",
                 "Contact Us",
+                "Events",
               ].map((item) => (
                 <Link
                   key={item}

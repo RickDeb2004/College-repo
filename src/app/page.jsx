@@ -297,7 +297,7 @@ export default function Component() {
                 img: "/vc.png", // Replace with actual path
               },
               {
-                title: "District Magistrate (Mau)",
+                title: "District Magistrate",
                 name: "Shri S Rajalingam, IAS",
                 role: "District Magistrate",
                 org: "Varanasi District",

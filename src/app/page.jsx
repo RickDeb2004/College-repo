@@ -61,15 +61,13 @@ export default function Component() {
           <a
             href="#"
             className="underline font-semibold hover:text-yellow-300 transition"
-          >
-            Click Here
-          </a>
+          ></a>
         </div>
         <div className="flex items-center space-x-2 mt-1 sm:mt-0">
           <span>
-            College Code: <span className="font-bold">086</span>
+            College Code: <span className="font-bold">1131</span>
           </span>
-          <span className="text-green-400 font-bold">📞 9450527744</span>
+          <span className="text-green-400 font-bold">📞 7985252219 </span>
         </div>
       </div>
       <header className="relative">
@@ -100,7 +98,10 @@ export default function Component() {
                 kkmvns.in
               </Link>
             </span>
-            <Link href="https://facebook.com/kkmvns" className="text-blue-600">
+            <Link
+              href="https://www.facebook.com/share/1Z4XkqSQQu/"
+              className="text-blue-600"
+            >
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24h11.494v-9.294H9.691v-3.621h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.762v2.311h3.587l-.467 3.621h-3.12V24h6.116c.732 0 1.325-.593 1.325-1.325V1.325C24 .593 23.407 0 22.675 0z" />
               </svg>
@@ -138,6 +139,7 @@ export default function Component() {
                 "Downloads",
                 "Gallery",
                 "Contact Us",
+                "Events",
               ].map((item) => (
                 <Link
                   key={item}
@@ -182,7 +184,7 @@ export default function Component() {
 
       <main className="flex-1 overflow-y-auto bg-white relative">
         {/* Sticky Notice Modal */}
-        <div
+        {/* <div
           className={`fixed top-20 left-4 z-50 bg-gray-700 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-lg shadow-lg transition-all duration-300 ${
             isNoticeModalOpen ? "block" : "hidden"
           }`}
@@ -225,10 +227,10 @@ export default function Component() {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
 
         {/* Sticky Registration Modal */}
-        <div
+        {/* <div
           className={`fixed top-20 right-4 z-50 bg-blue-600 bg-opacity-50 backdrop-blur-md text-white p-4 rounded-lg shadow-lg transition-all duration-300 ${
             isRegistrationModalOpen ? "block" : "hidden"
           }`}
@@ -261,7 +263,7 @@ export default function Component() {
               />
             </svg>
           </button>
-        </div>
+        </div> */}
 
         {/* Hero Section with Officials on the Right */}
         <section className="relative w-full min-h-[70vh] flex flex-col md:flex-row">
@@ -277,7 +279,7 @@ export default function Component() {
             />
             <div className="absolute bottom-0 w-full bg-[#98002e] h-8 flex items-center overflow-hidden">
               <div className="whitespace-nowrap animate-marquee text-white text-sm font-medium px-4">
-                28 January 2025 ⇒ Admission Open For Session 2025
+                Admission Open For Session 2025
               </div>
             </div>
           </div>
@@ -287,25 +289,25 @@ export default function Component() {
             {/* Card Component */}
             {[
               {
-                title: "Vice-Chancellor (MSDSU)",
-                name: "Prof. Sanjeev Kumar",
+                title: "Vice-Chancellor ",
+                name: "Prof. Anand Kumar Tyagi",
                 role: "Vice-Chancellor",
-                org: "Maharaja Suhel Dev State University, Azamgarh",
-                img: "/vc.jpg", // Replace with actual path
+                org: "Mahatma Gandhi Kashi Vidyapith University,Varanasi,Uttar Pradesh",
+                img: "/vc.png", // Replace with actual path
               },
               {
                 title: "District Magistrate (Mau)",
-                name: "Shri Praveen Mishra, IAS",
+                name: "Shri S Rajalingam, IAS",
                 role: "District Magistrate",
-                org: "Mau",
-                img: "/dm.jpg", // Replace with actual path
+                org: "Varanasi District",
+                img: "/dm.png", // Replace with actual path
               },
               {
                 title: "Manager",
-                name: "Mr. Pravin Kumar Rai",
+                name: "Mr. Sanjay Singh",
                 role: "Manager",
-                org: "B.S.R.K. URMILA MAHILA MAHAVIDYALAYA",
-                img: "/manager.jpg", // Replace with actual path
+                org: "KKMVNS College, Gaur Mirzamurad, Varanasi, Uttar Pradesh",
+                img: "/manager.png", // Replace with actual path
               },
             ].map((person) => (
               <div
@@ -361,35 +363,16 @@ export default function Component() {
                   <div className="space-y-4">
                     <div>
                       <p className="text-gray-700">
-                        <span className="text-blue-600 font-medium">
-                          28 Jan-25
-                        </span>{" "}
+                        <span className="text-blue-600 font-medium"></span>{" "}
                         Admission Open for Session 2025-26
                       </p>
-                      <p className="text-sm text-gray-500">READ MORE</p>
                     </div>
                     <div>
                       <p className="text-gray-700">
-                        <span className="text-blue-600 font-medium">
-                          26 Jan-25
-                        </span>{" "}
-                        Admission Open for Session 2025-26
+                        <span className="text-blue-600 font-medium"></span>{" "}
                       </p>
-                      <p className="text-sm text-gray-500">READ MORE</p>
                     </div>
-                    <div>
-                      <p className="text-gray-700">
-                        <span className="text-blue-600 font-medium">
-                          27 Jan-25
-                        </span>{" "}
-                        Welcome to B.S.R.K. Urmila Mahila Mahavidyalaya,
-                        Ramnagar Khalisa, Mau
-                      </p>
-                      <p className="text-sm text-gray-500">READ MORE</p>
-                    </div>
-                    <p className="text-blue-600 text-sm hover:underline">
-                      More News
-                    </p>
+                    <div></div>
                   </div>
                 </div>
 
@@ -401,41 +384,36 @@ export default function Component() {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2">
                       <img
-                        src="https://via.placeholder.com/40?text=Anti+Ragging"
+                        src="/anti.png"
                         alt="Anti Ragging"
                         className="w-10 h-10 rounded-full"
                       />
-                      <p className="text-gray-700">Anti Ragging Committee</p>
+                      <a
+                        href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:02849c01-c44c-4a73-863e-0d4188edaa7b" // Replace with your actual file path
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded transition"
+                      >
+                        <p className="text-gray-700">Anti Ragging Committee</p>
+                      </a>
                     </div>
                     <div className="flex items-center space-x-2">
                       <img
-                        src="https://via.placeholder.com/40?text=Sexual+Harassment"
+                        src="/sexual.png"
                         alt="Sexual Harassment"
                         className="w-10 h-10 rounded-full"
                       />
-                      <p className="text-gray-700">
-                        Sexual Harassment Committee
-                      </p>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <img
-                        src="https://via.placeholder.com/40?text=Internal+Complaint"
-                        alt="Internal Complaint"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <p className="text-gray-700">
-                        Internal Complaint Committee
-                      </p>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <img
-                        src="https://via.placeholder.com/40?text=Students+Grievance"
-                        alt="Students Grievance"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <p className="text-gray-700">
-                        Students Grievance and Redressal
-                      </p>
+
+                      <a
+                        href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:02849c01-c44c-4a73-863e-0d4188edaa7b" // Replace with your actual file path
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded transition"
+                      >
+                        <p className="text-gray-700">
+                          Sexual Harassment Committee
+                        </p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -448,39 +426,64 @@ export default function Component() {
                   <div className="space-y-4">
                     <div className="flex items-center space-x-2">
                       <img
-                        src="https://via.placeholder.com/40?text=RTI"
+                        src="/rti.png"
                         alt="RTI"
                         className="w-10 h-10 rounded-full"
                       />
-                      <p className="text-gray-700">Right to Information</p>
+                      <a
+                        href="https://eastern-thistle-375.notion.site/Right-to-Information-RTI-1cdbc2b60f3e801b836eda00f0a266b9" // Replace with your actual file path
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded transition"
+                      >
+                        <p className="text-gray-700">Right to Information</p>
+                      </a>
+                    </div>
+
+                    <div className="flex items-center space-x-2">
+                      <img
+                        src="/staff.png"
+                        alt="RTI"
+                        className="w-10 h-10 rounded-full"
+                      />
+                      <a
+                        href="https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3" // Replace with your actual file path
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded transition"
+                      >
+                        <p className="text-gray-700">STAFF DECLARATION</p>
+                      </a>
                     </div>
                     <div className="flex items-center space-x-2">
                       <img
-                        src="https://via.placeholder.com/40?text=IQAC"
-                        alt="IQAC"
+                        src="/aim.png"
+                        alt="RTI"
                         className="w-10 h-10 rounded-full"
                       />
-                      <p className="text-gray-700">
-                        Internal Quality Assurance Cell
-                      </p>
+                      <a
+                        href="https://eastern-thistle-375.notion.site/Aims-Objectives-1cdbc2b60f3e80e7b75cc57f2cc9e2e6" // Replace with your actual file path
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded transition"
+                      >
+                        <p className="text-gray-700">AIMS AND OBJECTIVES</p>
+                      </a>
                     </div>
                     <div className="flex items-center space-x-2">
                       <img
-                        src="https://via.placeholder.com/40?text=NSS"
-                        alt="NSS"
+                        src="/ALU.png"
+                        alt="RTI"
                         className="w-10 h-10 rounded-full"
                       />
-                      <p className="text-gray-700">National Service Scheme</p>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <img
-                        src="https://via.placeholder.com/40?text=NCC"
-                        alt="NCC"
-                        className="w-10 h-10 rounded-full"
-                      />
-                      <p className="text-gray-700">
-                        Students National Construction Code
-                      </p>
+                      <a
+                        href="https://eastern-thistle-375.notion.site/ALUMNI-1cdbc2b60f3e80f4b7ccc385b695656f?pvs=74" // Replace with your actual file path
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-2 hover:bg-gray-200 p-2 rounded transition"
+                      >
+                        <p className="text-gray-700">ALUMNI</p>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -532,9 +535,11 @@ export default function Component() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        <span className="ml-2 text-gray-500 text-sm">
-                          GPS Map Camera
-                        </span>
+                        <a href="https://g.co/kgs/Mp71XAf" target="_blank">
+                          <span className="ml-2 text-gray-500 text-sm">
+                            GPS Map Camera
+                          </span>
+                        </a>
                       </div>
                     </div>
                   </div>
@@ -545,7 +550,7 @@ export default function Component() {
               <div className="container mx-auto px-4 max-w-5xl">
                 <div className="space-y-8">
                   <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
-                    Our Facilities
+                    Our Hands on Laboratories
                   </h2>
                   <p className="text-gray-700 text-left max-w-3xl mx-auto leading-relaxed">
                     At KKMVNS College, we provide exceptional facilities to
@@ -555,10 +560,10 @@ export default function Component() {
                   </p>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                     {[
-                      { name: "Home Science Lab 1", src: "/home.png" },
+                      { name: "Home Science Lab ", src: "/home.png" },
                       { name: "Education Lab", src: "/home2.png" },
-                      { name: "Home Science Lab 3", src: "/home3.png" },
-                      { name: "Home Science Lab 4", src: "/home4.png" },
+                      { name: "Home Science Lab ", src: "/home3.png" },
+                      { name: "Home Science Lab ", src: "/home4.png" },
                       { name: "Computer Lab", src: "/lab.png" },
                       { name: "Library", src: "/lib.png" },
                       { name: "Games & Sport", src: "/sports.png" },
@@ -577,6 +582,38 @@ export default function Component() {
                   </div>
                 </div>
               </div>
+              {/* <div className="container mx-auto px-4 max-w-5xl">
+                <div className="space-y-8">
+                  <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
+                    Our Facilities
+                  </h2>
+                  <p className="text-gray-700 text-left max-w-3xl mx-auto leading-relaxed">
+                    At KKMVNS College, we provide exceptional facilities to
+                    enhance the learning experience. Our well-equipped
+                    infrastructure is designed to support both academic and
+                    extracurricular activities.
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    {[
+                      { name: "CCTV Survellience", src: "/cctv.png" },
+                      { name: "Cafeteria", src: "/cafe.png" },
+                      { name: "Purified Drinking Water", src: "/water.png" },
+                     
+                    ].map((facility) => (
+                      <div key={facility.name} className="text-center">
+                        <img
+                          src={facility.src}
+                          alt={facility.name}
+                          className="w-full h-48 object-cover rounded-lg shadow-md"
+                        />
+                        <p className="mt-2 text-gray-700 font-medium">
+                          {facility.name}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div> */}
             </section>
             <section id="courses" className="py-16 bg-[#14487A]">
               <div className="container mx-auto px-4 max-w-7xl">
@@ -589,18 +626,14 @@ export default function Component() {
                     <div className="grid grid-cols-2 gap-6">
                       {/* B.A. Card */}
                       <div className="relative bg-[#4CA7B3] h-40 flex items-center justify-center">
-                        <img
-                          src="/ba.jpg" // Use the correct image path
-                          alt="B.A."
-                          className="absolute top-0 left-0 w-full h-full object-cover opacity-60"
-                        />
+                       
                         <span className="text-white text-2xl font-bold z-10">
                           B.A.
                         </span>
                       </div>
 
                       {/* B.Sc. Card */}
-                      <div className="relative bg-[#4CA7B3] h-40 flex items-center justify-center">
+                      {/* <div className="relative bg-[#4CA7B3] h-40 flex items-center justify-center">
                         <img
                           src="/bsc.jpg" // Use the correct image path
                           alt="B.Sc."
@@ -609,7 +642,7 @@ export default function Component() {
                         <span className="text-white text-2xl font-bold z-10">
                           B.SC.
                         </span>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
@@ -621,16 +654,16 @@ export default function Component() {
                     <div className="flex flex-col gap-4">
                       {[
                         {
-                          name: "B.A., B.SC. AFFILIATION",
-                          file: "/approval/ba_bsc_affiliation.pdf",
+                          name: "B.A. AFFILIATION",
+                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:500f5e52-abdf-46f6-82b6-d00df826faaf",
                         },
                         {
                           name: "PRINCIPAL ANUMODAN LETTER",
-                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:6ccc13b7-8f1c-49e3-972f-f1836cb76da3",
+                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:e4acc1ad-50d3-4417-9189-1831765782a2",
                         },
                         {
                           name: "TEACHER ANUMODAN",
-                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:5d33dc21-2d91-4779-8b28-6810dd975eb9",
+                          file: "https://acrobat.adobe.com/id/urn:aaid:sc:AP:e4acc1ad-50d3-4417-9189-1831765782a2",
                         },
                       ].map((doc) => (
                         <a
@@ -663,11 +696,40 @@ export default function Component() {
                 </div>
               </div>
             </section>
-
-           
           </div>
         </section>
-        <section className="w-full py-12 md:py-24 lg:py-32">
+
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="space-y-8">
+            <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center uppercase">
+              Our Facilities
+            </h2>
+            <p className="text-gray-700 text-left max-w-3xl mx-auto leading-relaxed">
+              At KKMVNS College, we provide exceptional facilities to enhance
+              the learning experience. Our well-equipped infrastructure is
+              designed to support both academic and extracurricular activities.
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {[
+                { name: "CCTV Survellience", src: "/cctv.png" },
+                { name: "Cafeteria", src: "/cafe.png" },
+                { name: "Purified Drinking Water", src: "/water.png" },
+              ].map((facility) => (
+                <div key={facility.name} className="text-center">
+                  <img
+                    src={facility.src}
+                    alt={facility.name}
+                    className="w-full h-48 object-cover rounded-lg shadow-md"
+                  />
+                  <p className="mt-2 text-gray-700 font-medium">
+                    {facility.name}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        {/* <section className="w-full py-12 md:py-24 lg:py-32">
           <h2 className="text-3xl font-bold mb-4 text-center text-blue-800">
             Events
           </h2>
@@ -720,7 +782,7 @@ export default function Component() {
               </Card>
             </div>
           </div>
-        </section>
+        </section> */}
         <section id="trustees" className="py-16 bg-white">
           <div className="container mx-auto px-4 max-w-5xl">
             <h2 className="text-3xl font-bold text-blue-800 tracking-tight text-center mb-8">
@@ -728,9 +790,8 @@ export default function Component() {
             </h2>
             <div className="grid max-w-3xl gap-6 mx-auto lg:grid-cols-2 xl:grid-cols-3 xl:gap-8">
               {[
-                { role: "Manager", name: "Sanjay Singh" },
                 { role: "President", name: "Saksham Singh" },
-                { role: "Treasure Manager", name: "Shivanee Singh" },
+                { role: "Treasurer Manager", name: "Shivanee Singh" },
                 { role: "Vice President", name: "Anuradha Singh" },
               ].map((trustee, index) => (
                 <Card
@@ -758,10 +819,14 @@ export default function Component() {
             <div className="flex flex-col md:flex-row items-center gap-6">
               {[
                 { name: "Facilities", icon: "microscope", link: "#facilities" },
-                { name: "Virtual Tour", icon: "360", link: "#virtual-tour" },
+                {
+                  name: "Virtual Tour",
+                  icon: "360",
+                  link: "https://g.co/kgs/Mp71XAf",
+                },
                 { name: "News & Notices", icon: "news", link: "#news" },
                 { name: "Event Calendar", icon: "calendar", link: "#events" },
-                { name: "Downloads", icon: "download", link: "/down.pdf" },
+                // { name: "Downloads", icon: "download", link: "/down.pdf" },
               ].map((item) => (
                 <div
                   key={item.name}

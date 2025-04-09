@@ -269,7 +269,7 @@ export default function Component() {
         {/* Hero Section with Officials on the Right */}
         <section className="relative w-full min-h-[70vh] flex flex-col md:flex-row">
           {/* Hero Image */}
-          <div className="relative w-full md:w-2/3 h-[70vh]">
+          <div className="relative w-full h-[40vh] md:w-2/3 md:h-[70vh]">
             <Image
               src="/hero1.png"
               alt="Campus Image"
@@ -627,7 +627,6 @@ export default function Component() {
                     <div className="grid grid-cols-2 gap-6">
                       {/* B.A. Card */}
                       <div className="relative bg-[#4CA7B3] h-40 flex items-center justify-center">
-                       
                         <span className="text-white text-2xl font-bold z-10">
                           B.A.
                         </span>
